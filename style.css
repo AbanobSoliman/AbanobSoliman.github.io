@@ -1,6 +1,7 @@
 /* 
-  "Premium" style featuring gradients, hover effects, 
-  modern typography, and better visual hierarchy. 
+  Premium style featuring gradients, hover effects, 
+  modern typography, and better visual hierarchy 
+  with a sticky header.
 */
 
 /* Reset & Global Styles */
@@ -21,6 +22,7 @@ html, body {
 .navbar {
   background: linear-gradient(135deg, #28313B, #485461);
   padding: 1rem;
+  /* Sticky at the top */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -74,7 +76,7 @@ html, body {
   background: #ffffffcc;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.10);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 /* Profile Image */
@@ -125,7 +127,6 @@ section {
   display: inline-block;
 }
 
-/* Fancy underline effect for section headings */
 .section-header h2::after {
   content: "";
   display: block;
@@ -137,7 +138,10 @@ section {
 }
 
 /* CV, Publications, Projects, Contact sections */
-.cv-section, .publications-section, .projects-section, .contact-section {
+.cv-section,
+.publications-section,
+.projects-section,
+.contact-section {
   background-color: #fff;
   margin-top: 2rem;
   border: 1px solid #eee;
@@ -167,7 +171,6 @@ ul li {
   margin-bottom: 0.5rem;
 }
 
-/* Links inside content */
 .cv-content a {
   color: #2980b9;
   text-decoration: none;
