@@ -6,10 +6,11 @@
   <title>Abanob Soliman | Personal Website</title>
   <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css" />
+
   <!-- Google Fonts (example) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link 
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" 
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600&display=swap" 
     rel="stylesheet" 
   />
 </head>
@@ -28,17 +29,25 @@
     </div>
   </nav>
 
-  <!-- Home Section -->
+  <!-- Home Section (includes personal picture) -->
   <section id="home" class="home-section">
     <div class="intro">
+      <div class="profile-image-wrapper">
+        <!-- Replace 'img/AbanobSoliman.jpg' with your actual image path -->
+        <img 
+          src="img/AbanobSoliman.jpg" 
+          alt="Abanob Soliman" 
+          class="profile-image" 
+        />
+      </div>
       <h1>Hello, I'm Dr. Abanob Soliman</h1>
-      <p>
+      <p class="home-subtext">
         ADAS Algorithm Engineer, Ph.D. in Signal &amp; Image Processing,
         and soon-to-be Postdoctoral Researcher at the University of Twente 
         (starting February 2025).
       </p>
       <p class="small-hint">
-        (Placeholder: I will add more details about my upcoming position at the University of Twente.)
+        (Will add more details about my upcoming position soon.)
       </p>
     </div>
   </section>
@@ -77,11 +86,11 @@
           <li>Contributed to R&D projects with the Ultrasonics and Low-speed Maneuvering Functions team for major Automotive and Aerospace OEMs.</li>
           <li>Delivered MLC50/55/60 AUTSOAR C++14 compliant software for an automated parking solution in production at a leading British Automotive OEM.</li>
           <li>Developed an IMU (Gyro/Accel/Mag) and RTK-GPS optimization-based sensor fusion algorithm for a drone odometry pipeline, supporting a radar mapping solution in an eCAL middleware environment.</li>
-          <li>Created a novel spatio-temporal synchronization scheme for 12 ultrasonic sensors using Genetic Algorithm optimization, and validated it via extensive Monte Carlo simulations.</li>
+          <li>Created a novel spatio-temporal synchronization scheme for 12 ultrasonic sensors using Genetic Algorithm optimization, validated via extensive Monte Carlo simulations.</li>
           <li>Developed a Qt5/C++ plugin for SiL and HiL testing of a Short-Range Radar (SR-Radar) parking solution.</li>
-          <li>Implemented and tested a novel adaptation algorithm to interface SRR630 detections with an established parking perception pipeline using Ultrasonic Sensors (USS), as a proof-of-concept for software reusability within a software-defined vehicle architecture, in Embedded C++.</li>
-          <li>Developed a novel collision-free USS firing pattern hashing function using MATLAB/C++ and a Gaussian Mixture Model with MD5, applied to 10K+ vehicles from leading British, Indian, and Japanese Automotive OEMs.</li>
-          <li>Developed a transformer-based method to generate the Ultrasonic sensors firing sequences on-vehicle in real-time.</li>
+          <li>Implemented and tested a novel adaptation algorithm to interface SRR630 detections with an established parking perception pipeline using Ultrasonic Sensors (USS), as a proof-of-concept for software reusability.</li>
+          <li>Developed a collision-free USS firing pattern hashing function using MATLAB/C++ and Gaussian Mixture Model with MD5, applied to 10K+ vehicles from various OEMs.</li>
+          <li>Developed a transformer-based method to generate ultrasonic sensor firing sequences on-vehicle in real-time.</li>
           <li>Delivered technical presentations and proposals to major Automotive OEMs, including British, Indian, and American manufacturers.</li>
         </ul>
       </div>
@@ -90,9 +99,9 @@
         <h4>Oct 2020 – Oct 2023</h4>
         <p><strong>Doctoral Researcher</strong>, IBISC Laboratory - SIAM Team, Essonne, France</p>
         <ul>
-          <li>Research goal: Solutions for hybridizing multiple sensor modalities: (RGB - Depth - Event) cameras and IMU/GPS.</li>
-          <li>Teachings: C/C++ for L2, and L3 levels, Electronic Circuits for L2 level, Advanced Artificial Perception, and supervising projects for master students.</li>
-          <li>Additional activities: PhD students' representative at the lab's council and supported the preparation of the PhD students' day of the IBISC lab.</li>
+          <li>Research goal: Solutions for hybridizing multiple sensor modalities (RGB - Depth - Event cameras, IMU/GPS).</li>
+          <li>Teachings: C/C++ for L2 and L3, Electronic Circuits for L2, Advanced Artificial Perception, supervision of master student projects.</li>
+          <li>PhD students' representative at the lab's council; assisted with PhD students' day organization.</li>
         </ul>
       </div>
 
@@ -100,7 +109,7 @@
         <h4>Feb 2020 – Sep 2020</h4>
         <p><strong>Research Assistant - Sensor Fusion</strong>, IBISC Laboratory - MALIN Challenge, Essonne, France</p>
         <ul>
-          <li>The localization system featured two phases, a preliminary optimization stage, followed by a multi-sensor (IMU/GPS-camera) fusion process using ES-EKF.</li>
+          <li>Developed a two-phase localization system: an optimization stage followed by a multi-sensor (IMU/GPS-camera) fusion process using ES-EKF.</li>
         </ul>
       </div>
 
@@ -108,7 +117,7 @@
         <h4>Feb 2019 – Aug 2019</h4>
         <p><strong>Teaching Assistant</strong>, Nile University - Computer Engineering Department, Giza, Egypt</p>
         <ul>
-          <li>Assigned courses: Computer Systems Software, Logic Design, Embedded, Discrete Control Systems, and Computer Security.</li>
+          <li>Courses: Computer Systems Software, Logic Design, Embedded, Discrete Control Systems, and Computer Security.</li>
         </ul>
       </div>
 
@@ -116,8 +125,8 @@
         <h4>Jul 2018 – Nov 2018</h4>
         <p><strong>Embedded Systems Intern</strong>, EmbeddedFab Company, Giza, Egypt</p>
         <ul>
-          <li>Training included embedded software development on various architectures and writing usable drivers for industrial sensors and actuators.</li>
-          <li>Valeo (Egypt) Testing Academy participant - August 2018.</li>
+          <li>Embedded software development on various architectures; wrote drivers for industrial sensors and actuators.</li>
+          <li>Valeo (Egypt) Testing Academy participant (Aug 2018).</li>
         </ul>
       </div>
 
@@ -126,10 +135,10 @@
       <!-- Academic Qualifications -->
       <h3>Academic Qualifications</h3>
       <ul>
-        <li><strong>Feb 2024</strong> – Lecturer Qualification No. 24261392899, French Ministry of Higher Education and Research. Section: 61 - Computer Engineering, Automation and Signal Processing.</li>
-        <li><strong>Oct 2023</strong> – Doctoral Degree in Signal and Image Processing Sciences, Université Paris-Saclay, France. (School of Engineering and Systems)</li>
-        <li><strong>Sep 2020</strong> – Master's in Smart Aerospace and Autonomous Systems, Université Paris-Saclay, France. Grade: 16.778 / 20.0 (Très bien - Excellent), US/CA GPA Equivalency: 4.0/4.0, Rank: 1st</li>
-        <li><strong>Jun 2018</strong> – Bachelor's in Aerospace Engineering, Cairo University, Giza, Egypt. Grade: 88.89% (Distinction with Honours), US/CA GPA Equivalency: 4.0/4.0</li>
+        <li><strong>Feb 2024:</strong> Lecturer Qualification No. 24261392899 (France), Section: 61 - Computer Engineering, Automation, Signal Processing.</li>
+        <li><strong>Oct 2023:</strong> Doctoral Degree in Signal and Image Processing, Université Paris-Saclay, France.</li>
+        <li><strong>Sep 2020:</strong> Master's in Smart Aerospace and Autonomous Systems, Université Paris-Saclay, France. (GPA 16.778/20, 4.0/4.0 US/CA, Rank 1st)</li>
+        <li><strong>Jun 2018:</strong> Bachelor's in Aerospace Engineering, Cairo University, Egypt. (88.89% Honours, 4.0/4.0 US/CA)</li>
       </ul>
 
       <hr />
@@ -137,8 +146,8 @@
       <!-- Funded Projects -->
       <h3>Funded Projects</h3>
       <ul>
-        <li><strong>Aerospace Autonomous Navigation System</strong> – Engineered a stabilization system for a quadrotor and developed collision avoidance and navigation algorithms. (MATLAB, C++)</li>
-        <li><strong>Flight Simulator Platform Funded by BOEING</strong> – Created a motion cueing algorithm for a 6 DOF platform simulator, improving realism in pilot training. (C/C++, Matlab/Simulink)</li>
+        <li><strong>Aerospace Autonomous Navigation System</strong> – Stabilization system for a quadrotor with collision avoidance & navigation (MATLAB, C++).</li>
+        <li><strong>Flight Simulator Platform Funded by BOEING</strong> – Motion cueing algorithm for a 6 DOF simulator, improving pilot training realism (C/C++, Matlab/Simulink).</li>
       </ul>
 
       <hr />
@@ -158,7 +167,6 @@
       <!-- References -->
       <h3>References</h3>
       <ul>
-        <!-- Omitted one reference due to the if 0 in latex, so we keep the rest -->
         <li><strong>Kumar Parichay Singampalle</strong>, Line Manager, Continental Engineering Services Ltd<br/>
           <em>Email:</em> <a href="mailto:kumarparichay.singampalle@conti-engineering.com">kumarparichay.singampalle@conti-engineering.com</a>
         </li>
@@ -302,13 +310,13 @@
       <ul>
         <li>
           <strong>Aerospace Autonomous Navigation System</strong> – 
-          Engineered a stabilization system for a quadrotor and developed collision avoidance 
-          and navigation algorithms. Built with MATLAB, C++.
+          Stabilization system for a quadrotor and developed collision avoidance 
+          and navigation algorithms (MATLAB, C++).
         </li>
         <li>
           <strong>Flight Simulator Platform Funded by BOEING</strong> – 
           Created a motion cueing algorithm for a 6 DOF platform simulator, improving realism in 
-          pilot training. Used C/C++, Matlab/Simulink. 
+          pilot training (C/C++, Matlab/Simulink). 
           <a 
             href="https://www.youtube.com/watch?v=fnCwLlqg4IA" 
             target="_blank"
@@ -317,7 +325,7 @@
             (Video simulation)
           </a>
         </li>
-        <!-- You may add more personal or side projects here if desired -->
+        <!-- Additional personal/side projects can be listed here if desired -->
       </ul>
     </div>
   </section>
@@ -337,14 +345,18 @@
       </p>
       <p>
         <strong>LinkedIn:</strong> 
-        <a href="https://linkedin.com/in/abanobsoliman" target="_blank">linkedin.com/in/abanobsoliman</a>
+        <a href="https://linkedin.com/in/abanobsoliman" target="_blank">
+          linkedin.com/in/abanobsoliman
+        </a>
       </p>
       <p>
         <strong>GitHub:</strong> 
-        <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a>
+        <a href="https://github.com/AbanobSoliman" target="_blank">
+          github.com/AbanobSoliman
+        </a>
       </p>
       <p class="small-hint">
-        I'm looking forward to starting my postdoctoral researcher position at the 
+        I'm excited to begin my Postdoctoral Researcher position at the 
         University of Twente in February 2025!
       </p>
     </div>
