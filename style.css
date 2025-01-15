@@ -91,10 +91,33 @@ section {
   padding: 2rem;
 }
 
+.experience-item h4 {
+  margin-bottom: 0.25rem;
+  color: #2980b9;
+}
+
+.experience-item p strong {
+  font-weight: 600;
+}
+
+.experience-item ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
 /* Footer styles */
 .footer {
   background-color: #2c3e50;
   text-align: center;
   color: #fff;
   padding: 1rem 0;
+}
+
+.footer p {
+  margin: 0;
 }
