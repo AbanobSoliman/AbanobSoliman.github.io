@@ -24,18 +24,28 @@ html, body {
 .navbar {
   background: linear-gradient(135deg, #28313B, #485461);
   padding: 1rem;
-  /* Sticky at the top */
+  /* Make it sticky */
   position: sticky;
   top: 0;
   z-index: 1000;
+  /* This ensures it spans the full window width */
+  width: 100%;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1100px;
-  margin: 0 auto;
+
+  /* Remove the max-width and auto margin */
+  /* max-width: 1100px; */
+  /* margin: 0 auto; */
+
+  /* Use full width instead */
+  width: 100%;
+
+  /* Keep some padding so menu items aren't flush against the edge */
+  padding: 0 2rem;
 }
 
 .nav-logo {
