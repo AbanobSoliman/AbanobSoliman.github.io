@@ -9,7 +9,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach(link => {
   link.addEventListener('click', e => {
-    // Simple check to ensure we only do smooth scroll on same-page #links
+    // Only smooth scroll for #anchor links
     if (link.getAttribute('href').startsWith('#')) {
       e.preventDefault();
       const href = link.getAttribute('href');
