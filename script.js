@@ -9,13 +9,14 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach(link => {
   link.addEventListener('click', e => {
-    e.preventDefault();
-    const href = link.getAttribute('href');
-    if (href.startsWith('#')) {
+    // Simple check to ensure we only do smooth scroll on same-page #links
+    if (link.getAttribute('href').startsWith('#')) {
+      e.preventDefault();
+      const href = link.getAttribute('href');
       const target = document.querySelector(href);
       if (target) {
         window.scrollTo({
-          top: target.offsetTop - 60, // offset for the navbar
+          top: target.offsetTop - 70, // offset for sticky navbar
           behavior: 'smooth'
         });
       }
