@@ -24,7 +24,7 @@ This repository contains the **personal website** of **Dr. Abanob Soliman**, fea
    - In `index.html`, locate this snippet:
      ```html
      <img 
-       src="img/AbanobSoliman.jpg" 
+       src="img/AbanobSoliman.png" 
        alt="Abanob Soliman" 
        class="profile-image" 
      />
