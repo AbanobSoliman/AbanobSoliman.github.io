@@ -18,7 +18,9 @@ html, body {
   background: #f8f8f8;
 }
 
-/* Navbar */
+/* ============================
+   NAVBAR (Sticky/Floating)
+   ============================ */
 .navbar {
   background: linear-gradient(135deg, #28313B, #485461);
   padding: 1rem;
@@ -61,7 +63,9 @@ html, body {
   color: #ffdd57;
 }
 
-/* Home Section */
+/* ============================
+   HOME SECTION
+   ============================ */
 .home-section {
   display: flex;
   align-items: center;
@@ -111,14 +115,15 @@ html, body {
   color: #7f8c8d;
 }
 
-/* Common Section Container */
+/* ============================
+   SECTION CONTAINERS
+   ============================ */
 section {
   padding: 3rem 1rem;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Section Headers */
 .section-header h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -127,6 +132,7 @@ section {
   display: inline-block;
 }
 
+/* Fancy underline effect for section headings */
 .section-header h2::after {
   content: "";
   display: block;
@@ -137,7 +143,10 @@ section {
   border-radius: 2px;
 }
 
-/* CV, Publications, Projects, Contact sections */
+/* ============================
+   CV, PUBLICATIONS, PROJECTS,
+   AND CONTACT SECTIONS
+   ============================ */
 .cv-section,
 .publications-section,
 .projects-section,
@@ -150,7 +159,6 @@ section {
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* Experience & Lists */
 .experience-item h4 {
   margin-bottom: 0.25rem;
   color: #2980b9;
@@ -181,7 +189,9 @@ ul li {
   color: #ffdd57;
 }
 
-/* Footer */
+/* ============================
+   FOOTER
+   ============================ */
 .footer {
   background-color: #28313B;
   text-align: center;
