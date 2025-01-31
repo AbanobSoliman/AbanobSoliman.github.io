@@ -1,12 +1,14 @@
-/* New Modern Minimalistic Dark Style */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
-/* CSS Variables for easy theming */
+/* CSS Variables */
 :root {
-  --background-color: #121212;
-  --primary-color: #00eaff;
-  --accent-color: #ff4081;
-  --text-color: #e0e0e0;
-  --header-bg: rgba(18, 18, 18, 0.9);
+  --primary-color: #007BFF;    /* Cool blue */
+  --secondary-color: #28A745;  /* Fresh green */
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --card-bg: #ffffff;
+  --header-height: 70px;
 }
 
 /* Reset & Global Styles */
@@ -16,148 +18,245 @@
   box-sizing: border-box;
 }
 body {
-  background: var(--background-color);
+  font-family: 'Open Sans', sans-serif;
   color: var(--text-color);
-  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
   line-height: 1.6;
 }
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--accent-color);
-}
 
-/* Header */
-.header {
+/* Navigation (Fixed) */
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--header-bg);
-  backdrop-filter: blur(10px);
-  padding: 1rem 2rem;
+  height: var(--header-height);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
   z-index: 1000;
 }
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.navbar .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--primary-color);
 }
-.navbar {
+.navbar ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
-.navbar li {
-  font-size: 1rem;
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.3s;
 }
-.btn {
-  background: var(--primary-color);
-  color: var(--background-color);
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-.btn:hover {
-  background: var(--accent-color);
+.navbar ul li a:hover {
+  color: var(--primary-color);
 }
 
-/* Sections */
-section {
-  padding: 100px 20px;
+/* Hero / Home Section */
+#home {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.section-content {
-  max-width: 900px;
+  padding-top: var(--header-height);
+  background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+  flex-direction: column;
   text-align: center;
-  padding: 20px;
 }
-
-/* Home Section */
-#home {
-  background: linear-gradient(135deg, #1f1f1f, #323232);
+.home-content {
+  max-width: 800px;
 }
-.home-title {
+.home-content h1 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
 }
-.home-subtitle {
+.home-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background: #0056b3;
+}
 
-/* Section Headers */
+/* Personal Image (High Resolution) */
+.personal-image {
+  width: auto;
+  max-height: 500px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Section Styles */
+section {
+  padding: 80px 20px;
+}
 .section-header {
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
 }
 .section-header h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  color: var(--primary-color);
   position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 .section-header h2::after {
   content: "";
+  display: block;
   width: 60px;
   height: 4px;
-  background: var(--primary-color);
-  display: block;
-  margin: 0.5rem auto;
+  background: var(--secondary-color);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
-/* Cards for content blocks */
+/* Card Component for Detailed Sections */
 .card {
-  background: #1e1e1e;
-  padding: 2rem;
+  background: var(--card-bg);
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-bottom: 40px;
+}
+.card h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+.card h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+.card ul, .card li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  list-style: none;
+}
+.card li ul {
+  margin-left: 20px;
+  list-style: disc;
 }
 
-/* Footer */
-.footer {
-  background: #1a1a1a;
-  padding: 1rem;
+/* Logos for Institutions and Companies (Using External URLs) */
+.institution-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Responsive Video Embed */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 20px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Project Gallery for GitHub Projects Illustrations */
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.project-item {
+  width: 300px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.project-item img,
+.project-item iframe {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.project-item .project-caption {
+  padding: 10px;
   text-align: center;
   font-size: 0.9rem;
 }
 
-/* Animations */
-.fade-up {
+/* Contact Section */
+.contact-info {
+  text-align: center;
+}
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Smooth Fade-in Animation */
+.fade-in {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeUpAnimation 1s forwards;
+  animation: fadeIn 1s forwards;
 }
-@keyframes fadeUpAnimation {
+@keyframes fadeIn {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .header {
+  .navbar {
     flex-direction: column;
     padding: 1rem;
   }
-  .navbar {
+  .navbar ul {
     flex-direction: column;
     gap: 1rem;
   }
-  .home-title {
+  .home-content h1 {
     font-size: 2.5rem;
   }
   .section-header h2 {
     font-size: 2rem;
+  }
+  .project-item {
+    width: 100%;
   }
 }
