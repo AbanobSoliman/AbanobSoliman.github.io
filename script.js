@@ -1,37 +1,35 @@
 // script.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Update footer year dynamically
-  const yearEl = document.getElementById("year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
+  // Update footer year
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
   }
-
-  // Smooth scrolling for navigation links
-  const navLinks = document.querySelectorAll(".navbar a");
-  navLinks.forEach(link => {
+  
+  // Smooth scrolling for nav links
+  document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", function(e) {
       if (this.hash !== "") {
         e.preventDefault();
-        const targetId = this.hash;
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
+        const targetEl = document.querySelector(this.hash);
+        if (targetEl) {
           window.scrollTo({
-            top: targetElement.offsetTop - document.querySelector(".navbar").offsetHeight,
+            top: targetEl.offsetTop - document.querySelector("header").offsetHeight,
             behavior: "smooth"
           });
         }
       }
     });
   });
-
-  // Fade in elements on scroll using Intersection Observer
+  
+  // Intersection Observer for fade-in
   const faders = document.querySelectorAll(".fade-in");
-  const appearOptions = {
+  const options = {
     threshold: 0.3,
     rootMargin: "0px 0px -50px 0px"
   };
-
+  
   const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -39,9 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.unobserve(entry.target);
       }
     });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
+  }, options);
+  
+  faders.forEach(el => {
+    appearOnScroll.observe(el);
   });
 });
