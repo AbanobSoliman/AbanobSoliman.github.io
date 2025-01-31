@@ -2,218 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abanob Soliman | Personal Website</title>
-  <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css" />
-  
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600&display=swap" 
-    rel="stylesheet" 
-  />
-  
-  <!-- Particles.js Library -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Particle Background Container -->
-  <div id="particles-js"></div>
-  
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">Abanob Soliman</a>
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#cv" class="nav-link">CV</a></li>
-        <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Abanob Soliman</div>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <!-- Dark Mode Toggle Button -->
-      <button id="darkModeToggle">Dark Mode</button>
-    </div>
-  </nav>
-  
-  <!-- Home Section (includes personal picture) -->
-  <section id="home" class="home-section fade-in">
-    <div class="intro">
-      <div class="profile-image-wrapper">
-        <!-- Replace 'img/AbanobSoliman.png' with your actual image path -->
-        <img 
-          src="img/AbanobSoliman.png" 
-          alt="Abanob Soliman" 
-          class="profile-image" 
-        />
-      </div>
-      <h1>Hello, I'm Dr. Abanob Soliman</h1>
-      <p class="home-subtext">
-        ADAS Algorithm Engineer, Ph.D. in Signal &amp; Image Processing,
-        and soon-to-be Postdoctoral Researcher at the University of Twente 
-        (starting February 2025).
+    </nav>
+    <button id="themeToggle" class="btn">Toggle Light/Dark</button>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="section-content fade-up">
+      <h1 class="home-title">Hello, I'm Dr. Abanob Soliman</h1>
+      <p class="home-subtitle">
+        ADAS Algorithm Engineer | Ph.D. in Signal &amp; Image Processing | Postdoctoral Researcher at the University of Twente (Feb 2025)
       </p>
-      <p class="small-hint">
-        (Will add more details about my upcoming position soon.)
-      </p>
+      <button class="btn">Learn More</button>
     </div>
   </section>
-  
+
   <!-- CV Section -->
-  <section id="cv" class="cv-section fade-in">
-    <div class="section-header">
-      <h2>Curriculum Vitae</h2>
-    </div>
-    <div class="cv-content">
-      <p>
-        <strong>Download PDF Version:</strong> 
-        <a href="CV_AbanobSoliman.pdf" target="_blank">CV_AbanobSoliman.pdf</a>
-      </p>
-      <ul>
-        <li><strong>Address:</strong> 2D5 Newport Road, RH15 8QG, Burgess Hill, United Kingdom</li>
-        <li><strong>Phone:</strong> +44-0752 163 4231</li>
-        <li><strong>Email:</strong> <a href="mailto:abanob.soliman@ieee.org">abanob.soliman@ieee.org</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abanobsoliman" target="_blank">abanobsoliman</a></li>
-        <li><strong>Title:</strong> ADAS Algorithm Engineer, Continental Engineering Services | Ph.D. in Signal &amp; Image Processing</li>
-      </ul>
-      <hr />
-      <h3>Professional Experience</h3>
-      <div class="experience-item">
-        <h4>May 2023 – Present</h4>
-        <p><strong>Algorithm Engineer</strong>, Continental Engineering Services Limited, Burgess Hill, United Kingdom</p>
-        <ul>
-          <li>Contributed to R&D projects for major Automotive and Aerospace OEMs.</li>
-          <li>Delivered AUTOSAR C++14 compliant software for an automated parking solution.</li>
-          <li>Developed sensor fusion algorithms for drone odometry.</li>
-          <li>Implemented spatio-temporal synchronization using Genetic Algorithm.</li>
-          <li>Created a Qt5/C++ plugin for SiL and HiL testing of a parking solution.</li>
-          <li>Delivered technical presentations to major OEMs.</li>
-        </ul>
+  <section id="cv">
+    <div class="section-content fade-up">
+      <div class="section-header">
+        <h2>Curriculum Vitae</h2>
       </div>
-      <div class="experience-item">
-        <h4>Oct 2020 – Oct 2023</h4>
-        <p><strong>Doctoral Researcher</strong>, IBISC Laboratory - SIAM Team, Essonne, France</p>
-        <ul>
-          <li>Researched hybrid sensor modalities and taught multiple courses.</li>
-          <li>Represented PhD students in lab council meetings.</li>
-        </ul>
+      <div class="card">
+        <p><strong>Download PDF Version:</strong> <a href="CV_AbanobSoliman.pdf" target="_blank">CV_AbanobSoliman.pdf</a></p>
+        <p><strong>Email:</strong> <a href="mailto:abanob.soliman@ieee.org">abanob.soliman@ieee.org</a></p>
+        <p><strong>Phone:</strong> +44-0752 163 4231</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a></p>
       </div>
-      <hr />
-      <h3>Academic Qualifications</h3>
-      <ul>
-        <li><strong>Feb 2024:</strong> Lecturer Qualification, Section: 61 - Computer Engineering, Automation, Signal Processing (France).</li>
-        <li><strong>Oct 2023:</strong> Doctoral Degree in Signal &amp; Image Processing, Université Paris-Saclay, France.</li>
-        <li><strong>Sep 2020:</strong> Master’s in Smart Aerospace &amp; Autonomous Systems, Université Paris-Saclay, France.</li>
-        <li><strong>Jun 2018:</strong> Bachelor’s in Aerospace Engineering, Cairo University, Egypt.</li>
-      </ul>
-      <hr />
-      <h3>Funded Projects</h3>
-      <ul>
-        <li><strong>Aerospace Autonomous Navigation System</strong> – Collision avoidance &amp; navigation (MATLAB, C++).</li>
-        <li><strong>Flight Simulator (BOEING)</strong> – 6 DOF motion cueing algorithm (C/C++, Matlab/Simulink).</li>
-      </ul>
-      <hr />
-      <h3>Technical Skills</h3>
-      <ul>
-        <li><strong>Proficient:</strong> Embedded C/C++, Python, MATLAB/Simulink, RUST</li>
-        <li><strong>Experienced:</strong> Git CI/CD, Qt5, eCAL, ROS1, ROS2</li>
-        <li><strong>Familiar:</strong> JAVA, AutoSAR, DL/ML, JTAG, ARM Debugging</li>
-        <li><strong>Libraries:</strong> OpenCV, Scipy, scikit-learn, PCL</li>
-        <li><strong>Platforms:</strong> Docker, Linux, JIRA</li>
-      </ul>
-      <hr />
-      <h3>References</h3>
-      <ul>
-        <li><strong>Alexandre Durand</strong>, Continental Engineering Services Ltd<br/>
-          <em>Email:</em> <a href="mailto:alexandre.durand@conti-engineering.com">alexandre.durand@conti-engineering.com</a>
-        </li>
-        <li><strong>Hayley Scanlon</strong>, Continental Engineering Services Ltd<br/>
-          <em>Email:</em> <a href="mailto:au_lx_sm_ces.uk.hr@conti-engineering.com">au_lx_sm_ces.uk.hr@conti-engineering.com</a>
-        </li>
-      </ul>
     </div>
   </section>
-  
+
   <!-- Publications Section -->
-  <section id="publications" class="publications-section fade-in">
-    <div class="section-header">
-      <h2>Publications</h2>
-    </div>
-    <div class="publications-content">
-      <p>For a full list, see my 
-        <a href="https://scholar.google.com/citations?user=dN49z7MAAAAJ&hl=en" target="_blank">Google Scholar</a>.
-      </p>
-      <h3>Peer-reviewed Publications</h3>
-      <ul>
-        <li>
-          <strong>2024:</strong> <em>GPS-Enhanced RGB-D-IMU Calibration for Accurate Pose Estimation</em><br/>
-          Journal: Communications in Computer and Information Science<br/>
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-66743-5_14" target="_blank">
-            https://link.springer.com/chapter/10.1007/978-3-031-66743-5_14
-          </a>
-        </li>
-        <li>
-          <strong>2024:</strong> <em>DH-PTAM: A Deep Hybrid Stereo Events-Frames Parallel Tracking And Mapping System</em><br/>
-          Journal: IEEE Transactions on Intelligent Vehicles<br/>
-          <a href="https://ieeexplore.ieee.org/document/10553268" target="_blank">
-            https://ieeexplore.ieee.org/document/10553268
-          </a>
-        </li>
-      </ul>
-      <h3>Seminars (Contributing Talks)</h3>
-      <ul>
-        <li>
-          <strong>2022:</strong> Towards an Event-based Color-encoded Vision for Robotics<br/>
-          Event: GdR Meeting, Sorbonne University, Paris<br/>
-          <a href="https://gdr-iasis.cnrs.fr/reunion/484/" target="_blank">
-            gdr-iasis.cnrs.fr/reunion/484
-          </a>
-        </li>
-      </ul>
+  <section id="publications">
+    <div class="section-content fade-up">
+      <div class="section-header">
+        <h2>Publications</h2>
+      </div>
+      <div class="card">
+        <ul>
+          <li><strong>2024:</strong> <em>GPS-Enhanced RGB-D-IMU Calibration for Accurate Pose Estimation</em></li>
+          <li><strong>2024:</strong> <em>DH-PTAM: A Deep Hybrid Stereo Events-Frames Parallel Tracking And Mapping System</em></li>
+        </ul>
+        <p>See more on <a href="https://scholar.google.com/citations?user=dN49z7MAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+      </div>
     </div>
   </section>
-  
+
   <!-- Projects Section -->
-  <section id="projects" class="projects-section fade-in">
-    <div class="section-header">
-      <h2>Projects</h2>
-    </div>
-    <div class="projects-content">
-      <p>Key projects:</p>
-      <ul>
-        <li>
-          <strong>Aerospace Autonomous Navigation System</strong> – Quadrotor stabilization, collision avoidance (MATLAB, C++).
-        </li>
-        <li>
-          <strong>Flight Simulator Platform (Funded by BOEING)</strong> – 6 DOF motion cueing algorithm (C/C++, Matlab/Simulink). 
-          <a href="https://www.youtube.com/watch?v=fnCwLlqg4IA" target="_blank" rel="noopener noreferrer">(Video)</a>
-        </li>
-      </ul>
+  <section id="projects">
+    <div class="section-content fade-up">
+      <div class="section-header">
+        <h2>Projects</h2>
+      </div>
+      <div class="card">
+        <ul>
+          <li><strong>Aerospace Autonomous Navigation System</strong> – Collision avoidance &amp; navigation (MATLAB, C++).</li>
+          <li><strong>Flight Simulator (BOEING)</strong> – 6 DOF motion cueing algorithm (C/C++, Matlab/Simulink).</li>
+        </ul>
+      </div>
     </div>
   </section>
-  
+
   <!-- Contact Section -->
-  <section id="contact" class="contact-section fade-in">
-    <div class="section-header">
-      <h2>Contact</h2>
-    </div>
-    <div class="contact-content">
-      <p><strong>Email:</strong> <a href="mailto:abanob.soliman@ieee.org">abanob.soliman@ieee.org</a></p>
-      <p><strong>Phone:</strong> +44-0752 163 4231</p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abanobsoliman" target="_blank">linkedin.com/in/abanobsoliman</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a></p>
-      <p class="small-hint">I’m excited to begin my Postdoctoral Researcher position at the University of Twente in February 2025!</p>
+  <section id="contact">
+    <div class="section-content fade-up">
+      <div class="section-header">
+        <h2>Contact</h2>
+      </div>
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:abanob.soliman@ieee.org">abanob.soliman@ieee.org</a></p>
+        <p><strong>Phone:</strong> +44-0752 163 4231</p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abanobsoliman" target="_blank">linkedin.com/in/abanobsoliman</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a></p>
+      </div>
     </div>
   </section>
-  
+
   <!-- Footer -->
-  <footer class="footer fade-in">
+  <footer class="footer">
     <p>&copy; <span id="year"></span> Abanob Soliman. All rights reserved.</p>
   </footer>
-  
-  <!-- External JS -->
+
   <script src="script.js"></script>
 </body>
 </html>
