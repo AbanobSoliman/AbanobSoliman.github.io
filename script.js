@@ -1,20 +1,23 @@
-// New script.js for smooth scrolling and theme toggle
+// script.js
 
 document.addEventListener("DOMContentLoaded", () => {
   // Update footer year dynamically
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
-  // Smooth scroll for navigation links
-  const navLinks = document.querySelectorAll("nav a");
+  // Smooth scrolling for navigation links
+  const navLinks = document.querySelectorAll(".navbar a");
   navLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
-      const targetId = link.getAttribute("href");
-      if (targetId.startsWith("#")) {
+    link.addEventListener("click", function(e) {
+      if (this.hash !== "") {
         e.preventDefault();
-        const target = document.querySelector(targetId);
-        if (target) {
+        const targetId = this.hash;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
           window.scrollTo({
-            top: target.offsetTop - document.querySelector(".header").offsetHeight,
+            top: targetElement.offsetTop - document.querySelector(".navbar").offsetHeight,
             behavior: "smooth"
           });
         }
@@ -22,21 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Theme toggle (Light/Dark)
-  const themeToggle = document.getElementById("themeToggle");
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-      // Save preference
-      if (document.body.classList.contains("light-mode")) {
-        localStorage.setItem("theme", "light");
-      } else {
-        localStorage.setItem("theme", "dark");
+  // Fade in elements on scroll using Intersection Observer
+  const faders = document.querySelectorAll(".fade-in");
+  const appearOptions = {
+    threshold: 0.3,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("appear");
+        observer.unobserve(entry.target);
       }
     });
-    // Apply saved theme preference
-    if (localStorage.getItem("theme") === "light") {
-      document.body.classList.add("light-mode");
-    }
-  }
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
 });
