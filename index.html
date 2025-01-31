@@ -1,99 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abanob Soliman | Personal Website</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abanob Soliman | One Page CV</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts are imported via CSS -->
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
+  <!-- Navigation -->
+  <header class="navbar">
     <div class="logo">Abanob Soliman</div>
-    <nav>
-      <ul class="navbar">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <button id="themeToggle" class="btn">Toggle Light/Dark</button>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </header>
 
   <!-- Home Section -->
   <section id="home">
-    <div class="section-content fade-up">
-      <h1 class="home-title">Hello, I'm Dr. Abanob Soliman</h1>
-      <p class="home-subtitle">
+    <div class="home-content fade-in">
+      <!-- High Resolution Personal Image (sourced from Unsplash) -->
+      <img src="https://source.unsplash.com/600x500/?portrait" alt="Personal Image" class="personal-image">
+      <h1>Hello, I'm Dr. Abanob Soliman</h1>
+      <p>
         ADAS Algorithm Engineer | Ph.D. in Signal &amp; Image Processing | Postdoctoral Researcher at the University of Twente (Feb 2025)
       </p>
-      <button class="btn">Learn More</button>
+      <button class="btn-primary" onclick="document.querySelector('#cv').scrollIntoView({behavior: 'smooth'})">
+        View My CV
+      </button>
     </div>
   </section>
 
   <!-- CV Section -->
   <section id="cv">
-    <div class="section-content fade-up">
-      <div class="section-header">
-        <h2>Curriculum Vitae</h2>
-      </div>
-      <div class="card">
-        <p><strong>Download PDF Version:</strong> <a href="CV_AbanobSoliman.pdf" target="_blank">CV_AbanobSoliman.pdf</a></p>
-        <p><strong>Email:</strong> <a href="mailto:abanob.soliman@ieee.org">abanob.soliman@ieee.org</a></p>
-        <p><strong>Phone:</strong> +44-0752 163 4231</p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a></p>
-      </div>
+    <div class="section-header fade-in">
+      <h2>Curriculum Vitae</h2>
+    </div>
+    <div class="card fade-in">
+      <h3>Personal Details</h3>
+      <ul>
+        <li><strong>Address:</strong> 2D5 Newport Road, RH15 8QG, Burgess Hill, United Kingdom</li>
+        <li><strong>Phone:</strong> +44-0752 163 4231</li>
+        <li><strong>Email:</strong> <a href="mailto:abanob.soliman@ieee.org">abanob.soliman@ieee.org</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abanobsoliman" target="_blank">linkedin.com/in/abanobsoliman</a></li>
+        <li><strong>Title:</strong> ADAS Algorithm Engineer, Continental Engineering Services | Ph.D. in Signal &amp; Image Processing</li>
+        <li><strong>Download PDF Version:</strong> <a href="https://example.com/CV_AbanobSoliman.pdf" target="_blank">CV_AbanobSoliman.pdf</a></li>
+      </ul>
+
+      <h3>Professional Experience</h3>
+      <ul>
+        <li>
+          <h4>May 2023 – Present: Algorithm Engineer, Continental Engineering Services Limited, Burgess Hill, United Kingdom</h4>
+          <!-- Continental logo from Wikipedia -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Continental_logo.svg/2560px-Continental_logo.svg.png" alt="Continental Engineering Services" class="institution-logo">
+          <ul>
+            <li>Contributed to R&D projects with the Ultrasonics and Low-speed Maneuvering Functions team for major Automotive and Aerospace OEMs.</li>
+            <li>Delivered MLC50/55/60 AUTOSAR C++14 compliant software for an automated parking solution in production at a leading British Automotive OEM.</li>
+            <li>Developed an IMU (Gyro/Accel/Mag) and RTK-GPS optimization-based sensor fusion algorithm for a drone odometry pipeline, supporting a radar mapping solution in an eCAL environment.</li>
+            <li>Created a novel spatio-temporal synchronization scheme for 12 ultrasonic sensors using Genetic Algorithm optimization, validated via extensive Monte Carlo simulations.</li>
+            <li>Developed a Qt5/C++ plugin for SiL and HiL testing of a Short-Range Radar (SR-Radar) parking solution.</li>
+            <li>Implemented and tested a novel adaptation algorithm to interface SRR630 detections with an established parking perception pipeline using Ultrasonic Sensors (USS).</li>
+            <li>Developed a collision-free USS firing pattern hashing function using MATLAB/C++, GMM, and MD5, applied to 10K+ vehicles from various OEMs.</li>
+            <li>Developed a transformer-based method to generate ultrasonic sensor firing sequences on-vehicle in real-time.</li>
+            <li>Delivered technical presentations and proposals to major Automotive OEMs, including British, Indian, and American manufacturers.</li>
+          </ul>
+        </li>
+        <li>
+          <h4>Oct 2020 – Oct 2023: Doctoral Researcher, IBISC Laboratory - SIAM Team, Essonne, France</h4>
+          <!-- IBISC logo (placeholder) -->
+          <img src="https://via.placeholder.com/50?text=IBISC" alt="IBISC Laboratory" class="institution-logo">
+          <ul>
+            <li>Researched solutions for hybridizing multiple sensor modalities (RGB - Depth - Event cameras, IMU/GPS).</li>
+            <li>Teaching responsibilities: C/C++ (L2, L3), Electronic Circuits (L2), Advanced Artificial Perception, project supervision for master students.</li>
+            <li>Served as PhD students' representative at the lab council, supported organizing PhD students' day.</li>
+          </ul>
+        </li>
+        <li>
+          <h4>Feb 2020 – Sep 2020: Research Assistant - Sensor Fusion, IBISC Laboratory - MALIN Challenge, Essonne, France</h4>
+          <ul>
+            <li>Developed a two-phase localization system: an optimization stage plus multi-sensor (IMU/GPS-camera) fusion using ES-EKF.</li>
+          </ul>
+        </li>
+        <li>
+          <h4>Feb 2019 – Aug 2019: Teaching Assistant, Nile University - Computer Engineering Department, Giza, Egypt</h4>
+          <!-- Nile University logo -->
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Nile_University_logo.svg/1200px-Nile_University_logo.svg.png" alt="Nile University" class="institution-logo">
+          <ul>
+            <li>Courses taught: Computer Systems Software, Logic Design, Embedded, Discrete Control Systems, and Computer Security.</li>
+          </ul>
+        </li>
+        <li>
+          <h4>Jul 2018 – Nov 2018: Embedded Systems Intern, EmbeddedFab Company, Giza, Egypt</h4>
+          <!-- EmbeddedFab logo (placeholder) -->
+          <img src="https://via.placeholder.com/50?text=EmbeddedFab" alt="EmbeddedFab Company" class="institution-logo">
+          <ul>
+            <li>Embedded software training on various architectures; driver development for industrial sensors/actuators.</li>
+            <li>Valeo (Egypt) Testing Academy participant (Aug 2018).</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Academic Qualifications</h3>
+      <ul>
+        <li>
+          <strong>Feb 2024:</strong> Lecturer Qualification No. 24261392899, Section: 61 - Computer Engineering, Automation, Signal Processing (France).
+          <!-- Université Paris-Saclay logo -->
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Universit%C3%A9_Paris-Saclay_logo.svg/2560px-Universit%C3%A9_Paris-Saclay_logo.svg.png" alt="Université Paris-Saclay" class="institution-logo">
+        </li>
+        <li>
+          <strong>Oct 2023:</strong> Doctoral Degree in Signal &amp; Image Processing, Université Paris-Saclay, France.
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Universit%C3%A9_Paris-Saclay_logo.svg/2560px-Universit%C3%A9_Paris-Saclay_logo.svg.png" alt="Université Paris-Saclay" class="institution-logo">
+        </li>
+        <li>
+          <strong>Sep 2020:</strong> Master’s in Smart Aerospace &amp; Autonomous Systems, Université Paris-Saclay, France (GPA 16.778/20, 4.0/4.0, Rank 1st).
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Universit%C3%A9_Paris-Saclay_logo.svg/2560px-Universit%C3%A9_Paris-Saclay_logo.svg.png" alt="Université Paris-Saclay" class="institution-logo">
+        </li>
+        <li>
+          <strong>Jun 2018:</strong> Bachelor’s in Aerospace Engineering, Cairo University, Egypt (88.89% Honours, 4.0/4.0 US/CA).
+          <!-- Cairo University logo -->
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Cairo_University_Logo.png/220px-Cairo_University_Logo.png" alt="Cairo University" class="institution-logo">
+        </li>
+      </ul>
+
+      <h3>Funded Projects</h3>
+      <ul>
+        <li><strong>Aerospace Autonomous Navigation System</strong> – Stabilization system for a quadrotor; collision avoidance &amp; navigation (MATLAB, C++).</li>
+        <li><strong>Flight Simulator (BOEING)</strong> – 6 DOF motion cueing algorithm, enhancing pilot training (C/C++, Matlab/Simulink).</li>
+      </ul>
+
+      <h3>Technical Skills</h3>
+      <ul>
+        <li><strong>Proficient:</strong> Embedded C/C++, Python, MATLAB/Simulink, Scientific/Embedded RUST</li>
+        <li><strong>Experienced:</strong> Helix QAC, Git CI/CD, GoogleTest C++, Qt5, eCAL, ROS1, ROS2</li>
+        <li><strong>Familiar:</strong> JAVA, AutoSAR, DL/ML, JTAG, ARM Microcontroller SW/HW Flashing &amp; Debugging</li>
+        <li><strong>Libraries:</strong> OpenCV, Scipy, scikit-learn, PCL, Ceres, GTSAM, G2O, ORB-SLAM, CARLA</li>
+        <li><strong>Platforms:</strong> Confluence, Docker, Linux, JIRA, AutoSAR Builder, DOORS Requirement Management</li>
+      </ul>
+
+      <h3>References</h3>
+      <ul>
+        <li>
+          <strong>Alexandre Durand</strong>, Head of Business Center, Continental Engineering Services Ltd<br/>
+          <em>Email:</em> <a href="mailto:alexandre.durand@conti-engineering.com">alexandre.durand@conti-engineering.com</a>
+        </li>
+        <li>
+          <strong>Hayley Scanlon</strong>, Recruitment Business Partner, Continental Engineering Services Ltd<br/>
+          <em>Email:</em> <a href="mailto:au_lx_sm_ces.uk.hr@conti-engineering.com">au_lx_sm_ces.uk.hr@conti-engineering.com</a>
+        </li>
+        <li>
+          <strong>Samia Bouchafa-Bruneau</strong>, Professor, Université Paris-Saclay<br/>
+          <em>Email:</em> <a href="mailto:samia.bouchafa@univ-evry.fr">samia.bouchafa@univ-evry.fr</a>
+        </li>
+        <li>
+          <strong>Désiré Sidibé</strong>, Professor, IBISC Laboratory, Université Paris-Saclay<br/>
+          <em>Email:</em> <a href="mailto:drodesire.sidibe@univ-evry.fr">drodesire.sidibe@univ-evry.fr</a>
+        </li>
+      </ul>
     </div>
   </section>
 
   <!-- Publications Section -->
   <section id="publications">
-    <div class="section-content fade-up">
-      <div class="section-header">
-        <h2>Publications</h2>
-      </div>
-      <div class="card">
-        <ul>
-          <li><strong>2024:</strong> <em>GPS-Enhanced RGB-D-IMU Calibration for Accurate Pose Estimation</em></li>
-          <li><strong>2024:</strong> <em>DH-PTAM: A Deep Hybrid Stereo Events-Frames Parallel Tracking And Mapping System</em></li>
-        </ul>
-        <p>See more on <a href="https://scholar.google.com/citations?user=dN49z7MAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
-      </div>
+    <div class="section-header fade-in">
+      <h2>Publications</h2>
+    </div>
+    <div class="card fade-in">
+      <ul>
+        <li>
+          <strong>2024:</strong> <em>GPS-Enhanced RGB-D-IMU Calibration for Accurate Pose Estimation</em><br/>
+          Journal: Communications in Computer and Information Science<br/>
+          <a href="https://link.springer.com/chapter/10.1007/978-3-031-66743-5_14" target="_blank">
+            https://link.springer.com/chapter/10.1007/978-3-031-66743-5_14
+          </a><br/>
+          Role: First author, Theoretical Conception &amp; Implementation, Evaluation.
+        </li>
+        <li>
+          <strong>2024:</strong> <em>DH-PTAM: A Deep Hybrid Stereo Events-Frames Parallel Tracking And Mapping System</em><br/>
+          Journal: IEEE Transactions on Intelligent Vehicles<br/>
+          <a href="https://ieeexplore.ieee.org/document/10553268" target="_blank">
+            https://ieeexplore.ieee.org/document/10553268
+          </a><br/>
+          Code: <a href="https://github.com/AbanobSoliman/DH-PTAM" target="_blank">github.com/AbanobSoliman/DH-PTAM</a><br/>
+          Role: First author, Conception &amp; Implementation, Evaluation.
+        </li>
+        <li>
+          <strong>2023:</strong> <em>Visual Odometry Using Heterogeneous Cameras...</em><br/>
+          Defense date: October 5th, 2023<br/>
+          NNT: 2023UPAST119<br/>
+          <a href="https://theses.fr/2023UPAST119" target="_blank">
+            https://theses.fr/2023UPAST119
+          </a><br/>
+          Role: PhD Thesis.
+        </li>
+        <li>
+          <strong>2023:</strong> <em>IBISCape: A Simulated Benchmark...</em><br/>
+          Journal: Journal of Intelligent &amp; Robotic Systems<br/>
+          <a href="https://link.springer.com/article/10.1007/s10846-022-01753-7" target="_blank">
+            https://link.springer.com/article/10.1007/s10846-022-01753-7
+          </a><br/>
+          Code: <a href="https://github.com/AbanobSoliman/IBISCape" target="_blank">github.com/AbanobSoliman/IBISCape</a><br/>
+          Role: First author, Conception &amp; Implementation, Evaluation.
+        </li>
+        <li>
+          <strong>2023:</strong> <em>MAV Localization in Large-Scale Environments...</em><br/>
+          Journal: Sensors - MDPI<br/>
+          <a href="https://www.mdpi.com/1424-8220/23/1/516" target="_blank">
+            https://www.mdpi.com/1424-8220/23/1/516
+          </a><br/>
+          Code 1: <a href="https://github.com/AbanobSoliman/VIO_RGB_IMU" target="_blank">github.com/AbanobSoliman/VIO_RGB_IMU</a><br/>
+          Code 2: <a href="https://github.com/AbanobSoliman/B-splines" target="_blank">github.com/AbanobSoliman/B-splines</a><br/>
+          Role: First author, Conception &amp; Implementation, Evaluation.
+        </li>
+        <li>
+          <strong>2023:</strong> <em>Flow-Based Visual-Inertial Odometry...</em><br/>
+          Conference: 18th International Conference on Computer Vision Theory and Applications (VISAPP)<br/>
+          Location: Lisbon, Portugal<br/>
+          Role: Contributing author, C++ optimization software dev, extensive eval.
+        </li>
+        <li>
+          <strong>2023:</strong> <em>Robust RGB-D-IMU Calibration Method Applied...</em><br/>
+          Conference: 18th International Conference on Computer Vision Theory and Applications (VISAPP)<br/>
+          Location: Lisbon, Portugal<br/>
+          Code: <a href="https://github.com/AbanobSoliman/HCALIB" target="_blank">github.com/AbanobSoliman/HCALIB</a><br/>
+          Role: First author, Conception &amp; Implementation, Evaluation.
+        </li>
+        <li>
+          <strong>Seminars (Contributing Talks):</strong>
+          <ul>
+            <li>
+              <strong>2022:</strong> Towards an Event-based Color-encoded Vision for Robotics<br/>
+              Event: Emerging visual sensors for robotics (GdR Meeting, 10/11/2022)<br/>
+              Location: Sorbonne University, Paris, France<br/>
+              <a href="https://gdr-iasis.cnrs.fr/reunion/484/" target="_blank">
+                gdr-iasis.cnrs.fr/reunion/484
+              </a>
+            </li>
+            <li>
+              <strong>2022:</strong> Heterogeneous sensors… Fusion and odometry!<br/>
+              Event: IBISC lab PhD students annual day (23/03/2022)<br/>
+              Location: IBISC LAB, Pelvoux, France<br/>
+              <a href="https://www.ibisc.univ-evry.fr/journee-des-doctorants-du-laboratoire-ibisc-le-mercredi-23-mars-2022/" target="_blank">
+                ibisc.univ-evry.fr/journee-des-doctorants-du-laboratoire
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects">
-    <div class="section-content fade-up">
-      <div class="section-header">
-        <h2>Projects</h2>
+    <div class="section-header fade-in">
+      <h2>Projects</h2>
+    </div>
+    <div class="card fade-in">
+      <ul>
+        <li>
+          <strong>Aerospace Autonomous Navigation System</strong> – Quadrotor stabilization system, collision avoidance &amp; navigation (MATLAB, C++).
+        </li>
+        <li>
+          <strong>Flight Simulator Platform (Funded by BOEING)</strong> – 6 DOF motion cueing algorithm for pilot training (C/C++, Matlab/Simulink).
+          <!-- Embedded YouTube video -->
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/fnCwLlqg4IA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </li>
+      </ul>
+      <!-- Project Gallery for GitHub Projects Illustrations -->
+      <div class="section-header fade-in">
+        <h2>Project Gallery</h2>
       </div>
-      <div class="card">
-        <ul>
-          <li><strong>Aerospace Autonomous Navigation System</strong> – Collision avoidance &amp; navigation (MATLAB, C++).</li>
-          <li><strong>Flight Simulator (BOEING)</strong> – 6 DOF motion cueing algorithm (C/C++, Matlab/Simulink).</li>
-        </ul>
+      <div class="project-gallery fade-in">
+        <div class="project-item">
+          <img src="https://via.placeholder.com/300?text=VIO_RGB_IMU" alt="VIO_RGB_IMU Illustration">
+          <div class="project-caption">VIO_RGB_IMU: Visual-Inertial Odometry</div>
+        </div>
+        <div class="project-item">
+          <img src="https://via.placeholder.com/300?text=B-splines" alt="B-splines Illustration">
+          <div class="project-caption">B-splines: Trajectory Smoothing</div>
+        </div>
+        <div class="project-item">
+          <iframe src="https://www.youtube.com/embed/fnCwLlqg4IA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="project-caption">DH-PTAM: Parallel Tracking And Mapping</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <div class="section-content fade-up">
-      <div class="section-header">
-        <h2>Contact</h2>
-      </div>
-      <div class="card">
+    <div class="section-header fade-in">
+      <h2>Contact</h2>
+    </div>
+    <div class="card fade-in">
+      <div class="contact-info">
         <p><strong>Email:</strong> <a href="mailto:abanob.soliman@ieee.org">abanob.soliman@ieee.org</a></p>
         <p><strong>Phone:</strong> +44-0752 163 4231</p>
         <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abanobsoliman" target="_blank">linkedin.com/in/abanobsoliman</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a></p>
+        <p class="small-hint">I’m excited to begin my Postdoctoral Researcher position at the University of Twente in February 2025!</p>
       </div>
     </div>
   </section>
