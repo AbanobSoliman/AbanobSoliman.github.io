@@ -3,38 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Abanob Soliman | One Page CV</title>
+  <title>Dr. Abanob Soliman | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts are imported via CSS -->
+  <!-- Google Fonts loaded via CSS -->
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="navbar">
+  <!-- Header / Navigation -->
+  <header>
     <div class="logo">Abanob Soliman</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#cv">CV</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <!-- Home Section -->
-  <section id="home">
-    <div class="home-content fade-in">
-      <!-- Personal image is local -->
-      <img src="img/personal.jpg" alt="Personal Image" class="personal-image">
+  
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content fade-in">
       <h1>Hello, I'm Dr. Abanob Soliman</h1>
-      <p>
-        ADAS Algorithm Engineer | Ph.D. in Signal &amp; Image Processing | Postdoctoral Researcher at the University of Twente (Feb 2025)
-      </p>
-      <button class="btn-primary" onclick="document.querySelector('#cv').scrollIntoView({behavior: 'smooth'})">
-        View My CV
-      </button>
+      <p>ADAS Algorithm Engineer • Ph.D. in Signal &amp; Image Processing • Postdoctoral Researcher at the University of Twente (Feb 2025)</p>
+      <button class="btn" onclick="document.querySelector('#cv').scrollIntoView({ behavior: 'smooth' })">View My CV</button>
     </div>
   </section>
-
+  
   <!-- CV Section -->
   <section id="cv">
     <div class="section-header fade-in">
@@ -51,13 +47,13 @@
         <li><strong>Title:</strong> ADAS Algorithm Engineer, Continental Engineering Services | Ph.D. in Signal &amp; Image Processing</li>
         <li><strong>Download PDF Version:</strong> <a href="https://example.com/CV_AbanobSoliman.pdf" target="_blank">CV_AbanobSoliman.pdf</a></li>
       </ul>
-
+      
       <h3>Professional Experience</h3>
       <ul>
         <li>
           <h4>May 2023 – Present: Algorithm Engineer, Continental Engineering Services Limited, Burgess Hill, United Kingdom</h4>
-          <!-- Continental logo from Wikimedia Commons -->
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Continental_logo.svg/512px-Continental_logo.svg.png" alt="Continental Engineering Services" class="institution-logo">
+          <!-- Continental logo -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Continental_logo.svg/512px-Continental_logo.svg.png" alt="Continental" class="logo-img">
           <ul>
             <li>Contributed to R&D projects with the Ultrasonics and Low-speed Maneuvering Functions team for major Automotive and Aerospace OEMs.</li>
             <li>Delivered MLC50/55/60 AUTOSAR C++14 compliant software for an automated parking solution in production at a leading British Automotive OEM.</li>
@@ -72,67 +68,67 @@
         </li>
         <li>
           <h4>Oct 2020 – Oct 2023: Doctoral Researcher, IBISC Laboratory - SIAM Team, Essonne, France</h4>
-          <!-- IBISC logo: using placeholder -->
-          <img src="https://via.placeholder.com/50?text=IBISC" alt="IBISC Laboratory" class="institution-logo">
+          <!-- IBISC logo (placeholder) -->
+          <img src="https://via.placeholder.com/50?text=IBISC" alt="IBISC Laboratory" class="logo-img">
           <ul>
-            <li>Researched solutions for hybridizing multiple sensor modalities (RGB - Depth - Event cameras, IMU/GPS).</li>
+            <li>Researched solutions for hybridizing multiple sensor modalities (RGB – Depth – Event cameras, IMU/GPS).</li>
             <li>Teaching responsibilities: C/C++ (L2, L3), Electronic Circuits (L2), Advanced Artificial Perception, project supervision for master students.</li>
             <li>Served as PhD students' representative at the lab council, supported organizing PhD students' day.</li>
           </ul>
         </li>
         <li>
-          <h4>Feb 2020 – Sep 2020: Research Assistant - Sensor Fusion, IBISC Laboratory - MALIN Challenge, Essonne, France</h4>
+          <h4>Feb 2020 – Sep 2020: Research Assistant – Sensor Fusion, IBISC Laboratory – MALIN Challenge, Essonne, France</h4>
           <ul>
             <li>Developed a two-phase localization system: an optimization stage plus multi-sensor (IMU/GPS-camera) fusion using ES-EKF.</li>
           </ul>
         </li>
         <li>
-          <h4>Feb 2019 – Aug 2019: Teaching Assistant, Nile University - Computer Engineering Department, Giza, Egypt</h4>
-          <!-- Nile University logo from Wikimedia Commons -->
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Nile_University_logo.svg/1200px-Nile_University_logo.svg.png" alt="Nile University" class="institution-logo">
+          <h4>Feb 2019 – Aug 2019: Teaching Assistant, Nile University – Computer Engineering Department, Giza, Egypt</h4>
+          <!-- Nile University logo -->
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Nile_University_logo.svg/1200px-Nile_University_logo.svg.png" alt="Nile University" class="logo-img">
           <ul>
             <li>Courses taught: Computer Systems Software, Logic Design, Embedded, Discrete Control Systems, and Computer Security.</li>
           </ul>
         </li>
         <li>
           <h4>Jul 2018 – Nov 2018: Embedded Systems Intern, EmbeddedFab Company, Giza, Egypt</h4>
-          <!-- EmbeddedFab logo using placeholder -->
-          <img src="https://via.placeholder.com/50?text=EmbeddedFab" alt="EmbeddedFab Company" class="institution-logo">
+          <!-- EmbeddedFab logo (placeholder) -->
+          <img src="https://via.placeholder.com/50?text=EmbeddedFab" alt="EmbeddedFab Company" class="logo-img">
           <ul>
             <li>Embedded software training on various architectures; driver development for industrial sensors/actuators.</li>
             <li>Valeo (Egypt) Testing Academy participant (Aug 2018).</li>
           </ul>
         </li>
       </ul>
-
+      
       <h3>Academic Qualifications</h3>
       <ul>
         <li>
-          <strong>Feb 2024:</strong> Lecturer Qualification No. 24261392899, Section: 61 - Computer Engineering, Automation, Signal Processing (France).
-          <!-- Université Paris-Saclay logo from Wikimedia Commons -->
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Universit%C3%A9_Paris-Saclay_logo.svg/2560px-Universit%C3%A9_Paris-Saclay_logo.svg.png" alt="Université Paris-Saclay" class="institution-logo">
+          <strong>Feb 2024:</strong> Lecturer Qualification No. 24261392899, Section: 61 – Computer Engineering, Automation, Signal Processing (France).
+          <!-- Université Paris-Saclay logo -->
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Universit%C3%A9_Paris-Saclay_logo.svg/2560px-Universit%C3%A9_Paris-Saclay_logo.svg.png" alt="Université Paris-Saclay" class="logo-img">
         </li>
         <li>
           <strong>Oct 2023:</strong> Doctoral Degree in Signal &amp; Image Processing, Université Paris-Saclay, France.
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Universit%C3%A9_Paris-Saclay_logo.svg/2560px-Universit%C3%A9_Paris-Saclay_logo.svg.png" alt="Université Paris-Saclay" class="institution-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Universit%C3%A9_Paris-Saclay_logo.svg/2560px-Universit%C3%A9_Paris-Saclay_logo.svg.png" alt="Université Paris-Saclay" class="logo-img">
         </li>
         <li>
           <strong>Sep 2020:</strong> Master’s in Smart Aerospace &amp; Autonomous Systems, Université Paris-Saclay, France (GPA 16.778/20, 4.0/4.0, Rank 1st).
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Universit%C3%A9_Paris-Saclay_logo.svg/2560px-Universit%C3%A9_Paris-Saclay_logo.svg.png" alt="Université Paris-Saclay" class="institution-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Universit%C3%A9_Paris-Saclay_logo.svg/2560px-Universit%C3%A9_Paris-Saclay_logo.svg.png" alt="Université Paris-Saclay" class="logo-img">
         </li>
         <li>
           <strong>Jun 2018:</strong> Bachelor’s in Aerospace Engineering, Cairo University, Egypt (88.89% Honours, 4.0/4.0 US/CA).
-          <!-- Cairo University logo from Wikimedia Commons -->
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Cairo_University_Logo.png/220px-Cairo_University_Logo.png" alt="Cairo University" class="institution-logo">
+          <!-- Cairo University logo -->
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Cairo_University_Logo.png/220px-Cairo_University_Logo.png" alt="Cairo University" class="logo-img">
         </li>
       </ul>
-
+      
       <h3>Funded Projects</h3>
       <ul>
         <li><strong>Aerospace Autonomous Navigation System</strong> – Stabilization system for a quadrotor; collision avoidance &amp; navigation (MATLAB, C++).</li>
         <li><strong>Flight Simulator (BOEING)</strong> – 6 DOF motion cueing algorithm, enhancing pilot training (C/C++, Matlab/Simulink).</li>
       </ul>
-
+      
       <h3>Technical Skills</h3>
       <ul>
         <li><strong>Proficient:</strong> Embedded C/C++, Python, MATLAB/Simulink, Scientific/Embedded RUST</li>
@@ -141,7 +137,7 @@
         <li><strong>Libraries:</strong> OpenCV, Scipy, scikit-learn, PCL, Ceres, GTSAM, G2O, ORB-SLAM, CARLA</li>
         <li><strong>Platforms:</strong> Confluence, Docker, Linux, JIRA, AutoSAR Builder, DOORS Requirement Management</li>
       </ul>
-
+      
       <h3>References</h3>
       <ul>
         <li>
@@ -163,7 +159,7 @@
       </ul>
     </div>
   </section>
-
+  
   <!-- Publications Section -->
   <section id="publications">
     <div class="section-header fade-in">
@@ -236,24 +232,20 @@
               <strong>2022:</strong> Towards an Event-based Color-encoded Vision for Robotics<br/>
               Event: Emerging visual sensors for robotics (GdR Meeting, 10/11/2022)<br/>
               Location: Sorbonne University, Paris, France<br/>
-              <a href="https://gdr-iasis.cnrs.fr/reunion/484/" target="_blank">
-                gdr-iasis.cnrs.fr/reunion/484
-              </a>
+              <a href="https://gdr-iasis.cnrs.fr/reunion/484/" target="_blank">gdr-iasis.cnrs.fr/reunion/484</a>
             </li>
             <li>
               <strong>2022:</strong> Heterogeneous sensors… Fusion and odometry!<br/>
               Event: IBISC lab PhD students annual day (23/03/2022)<br/>
               Location: IBISC LAB, Pelvoux, France<br/>
-              <a href="https://www.ibisc.univ-evry.fr/journee-des-doctorants-du-laboratoire-ibisc-le-mercredi-23-mars-2022/" target="_blank">
-                ibisc.univ-evry.fr/journee-des-doctorants-du-laboratoire
-              </a>
+              <a href="https://www.ibisc.univ-evry.fr/journee-des-doctorants-du-laboratoire-ibisc-le-mercredi-23-mars-2022/" target="_blank">ibisc.univ-evry.fr/journee-des-doctorants-du-laboratoire</a>
             </li>
           </ul>
         </li>
       </ul>
     </div>
   </section>
-
+  
   <!-- Projects Section -->
   <section id="projects">
     <div class="section-header fade-in">
@@ -266,13 +258,11 @@
         </li>
         <li>
           <strong>Flight Simulator Platform (Funded by BOEING)</strong> – 6 DOF motion cueing algorithm for pilot training (C/C++, Matlab/Simulink).
-          <!-- Embedded YouTube video -->
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/fnCwLlqg4IA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </li>
       </ul>
-      <!-- Project Gallery for GitHub Projects Illustrations -->
       <div class="section-header fade-in">
         <h2>Project Gallery</h2>
       </div>
@@ -292,7 +282,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Contact Section -->
   <section id="contact">
     <div class="section-header fade-in">
@@ -304,16 +294,16 @@
         <p><strong>Phone:</strong> +44-0752 163 4231</p>
         <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abanobsoliman" target="_blank">linkedin.com/in/abanobsoliman</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a></p>
-        <p class="small-hint">I’m excited to begin my Postdoctoral Researcher position at the University of Twente in February 2025!</p>
+        <p>I’m excited to begin my Postdoctoral Researcher position at the University of Twente in February 2025!</p>
       </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
-  <footer class="footer">
+  <footer>
     <p>&copy; <span id="year"></span> Abanob Soliman. All rights reserved.</p>
   </footer>
-
+  
   <script src="script.js"></script>
 </body>
 </html>
