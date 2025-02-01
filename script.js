@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Set current year in footer (if applicable)
+  // Set current year in footer
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
@@ -15,16 +15,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
-  // Make header visible when the green button is clicked
-  const showHeaderBtn = document.getElementById("showHeaderBtn");
-  if (showHeaderBtn) {
-    showHeaderBtn.addEventListener("click", () => {
-      document.querySelector(".header").style.display = "block";
+  
+  // Toggle header visibility when "More" button is clicked
+  const toggleHeaderBtn = document.getElementById("toggleHeaderBtn");
+  const header = document.querySelector(".header");
+  
+  if (toggleHeaderBtn && header) {
+    toggleHeaderBtn.addEventListener("click", () => {
+      if (header.style.display === "block") {
+        header.style.display = "none";
+      } else {
+        header.style.display = "block";
+      }
     });
   }
   
-  // Intersection Observer for fade-in (if used)
+  // Optional: Intersection Observer for fade-in animations (if you use it)
   const faders = document.querySelectorAll(".fade-in");
   const options = {
     threshold: 0.3,
