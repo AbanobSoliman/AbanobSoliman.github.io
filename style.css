@@ -176,9 +176,12 @@ body {
 
 /* Logos */
 .logo-img {
-  width: 90px;
+  width: 70px; /* adjust width as needed */
   margin-right: 10px;
   vertical-align: middle;
+  background: #fff; /* white background */
+  padding: 5px; /* optional padding for spacing */
+  border-radius: 4px; /* optional, for smoother corners */
 }
 
 /* Video Embed */
