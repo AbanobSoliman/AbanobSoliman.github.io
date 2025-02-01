@@ -175,7 +175,7 @@ body {
 
 /* Logos */
 .logo-img {
-  width: 70px;
+  width: 90px;
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -192,8 +192,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25%;
-  height: 25%;
+  width: 50%;
+  height: auto;
   border: 0;
 }
 
