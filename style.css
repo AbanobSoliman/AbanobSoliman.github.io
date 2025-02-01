@@ -1,7 +1,25 @@
-/* Import Google Fonts */
+/* Toggle Header Button - fixed in top right corner */
+#toggleHeaderBtn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1100; /* above header */
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s;
+}
+#toggleHeaderBtn:hover {
+  background: var(--light-accent);
+}
+
+/* Existing styles… */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;400&display=swap');
 
-/* Base Variables */
 :root {
   --bg-color: #0f0f0f;
   --accent-color: #00eaff;
@@ -37,7 +55,7 @@ body {
   background: rgba(15,15,15,0.9);
   padding: 20px 0;
   z-index: 1000;
-  display: none;
+  display: none; /* Hidden by default */
 }
 .header .container {
   display: flex;
