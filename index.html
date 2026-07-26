@@ -1,355 +1,779 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <title>Dr. Abanob Soliman | Portfolio &amp; CV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link to our stylesheet -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Dr. Ir. Abanob Soliman — SLAM &amp; Computer Vision</title>
+<meta name="description" content="Principal SLAM &amp; Computer Vision Engineer and PhD-qualified robotics researcher. State estimation, visual-inertial odometry and multi-sensor fusion for GNSS-denied autonomy.">
+<meta name="author" content="Abanob Soliman">
+<link rel="canonical" href="https://abanobsoliman.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Dr. Ir. Abanob Soliman — SLAM &amp; Computer Vision">
+<meta property="og:description" content="Principal SLAM &amp; Computer Vision Engineer. State estimation, visual-inertial odometry and multi-sensor fusion for GNSS-denied autonomy.">
+<meta property="og:url" content="https://abanobsoliman.github.io/">
+<meta property="og:image" content="https://abanobsoliman.github.io/img/Profile_new.jpeg">
+<meta property="profile:first_name" content="Abanob">
+<meta property="profile:last_name" content="Soliman">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dr. Ir. Abanob Soliman — SLAM &amp; Computer Vision">
+<meta name="twitter:description" content="State estimation, visual-inertial odometry and multi-sensor fusion for GNSS-denied autonomy.">
+<meta name="twitter:image" content="https://abanobsoliman.github.io/img/Profile_new.jpeg">
+
+<link rel="icon" href="img/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<meta name="theme-color" content="#EEF2F8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script>
+  // Runs before first paint: sets the theme and marks that JS is available,
+  // so the tabbed console never flashes and the no-JS page still reads.
+  (function () {
+    document.documentElement.classList.add('js');
+    try {
+      // Light is the default for everyone; the OS preference is deliberately
+      // not consulted. Dark is opt-in via the toggle and remembered after that.
+      var saved = localStorage.getItem('theme');
+      document.documentElement.dataset.theme = saved === 'dark' ? 'dark' : 'light';
+    } catch (e) { /* storage blocked — keep the light default */ }
+  })();
+</script>
 </head>
+
 <body>
-  <!-- Toggle Header Button -->
-  <button id="toggleHeaderBtn" class="btn">More</button>
-  
-  <!-- Header / Navigation -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <!-- Using your local icon-192.png for the logo -->
-        <img src="img/icon-192.png" alt="Logo">
-        Dr. Abanob Soliman
+<a class="skip-link" href="#stage">Skip to content</a>
+
+<!-- Icon sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-scholar" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12.5V17c3.33 2.67 8.67 2.67 12 0v-4.5"/><path d="M22 10v6"/></symbol>
+  <symbol id="i-orcid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M8 10v7"/><path d="M8 7.2v.1"/><path d="M12 17v-7h2.6a3.5 3.5 0 0 1 0 7H12Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  <symbol id="i-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(-28 12 12)"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 4v16M15 4v16"/></symbol>
+</svg>
+
+
+<div class="console">
+
+  <!-- ══════════ Left console: identity + live map ══════════ -->
+  <aside class="rail">
+
+    <div class="rail__top">
+      <a class="wordmark" href="#overview">
+        <span class="wordmark__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M2 18 8 6l6 9 3-4.5 5 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="6" r="2" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="wordmark__text">A. Soliman</span>
+      </a>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark theme">
+        <svg class="ico ico--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="ico ico--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+    </div>
+
+    <div class="ident">
+      <figure class="portrait">
+        <div class="portrait__frame">
+          <img src="img/Profile_new.jpeg" alt="Portrait of Abanob Soliman" width="400" height="400" fetchpriority="high">
+          <span class="portrait__bracket portrait__bracket--tl" aria-hidden="true"></span>
+          <span class="portrait__bracket portrait__bracket--tr" aria-hidden="true"></span>
+          <span class="portrait__bracket portrait__bracket--bl" aria-hidden="true"></span>
+          <span class="portrait__bracket portrait__bracket--br" aria-hidden="true"></span>
+        </div>
+      </figure>
+
+      <div class="ident__text">
+        <p class="ident__pre">Dr. Ir.</p>
+        <h1 class="ident__name">Abanob Soliman</h1>
+        <p class="ident__role">Principal SLAM &amp; Computer Vision Engineer</p>
+        <p class="ident__org">KRUSH Labs B.V. · Eindhoven, NL</p>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#cv">CV</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
     </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <!-- Your personal image stored locally -->
-      <img src="img/Profile_new.jpeg" alt="Dr. Abanob Soliman" class="hero-img">
-      <h1>Dr. Abanob Soliman</h1>
-      <p>
-        Researcher (Postdoc) in Off-Road SLAM and Advanced Perception
-        <br> University of Twente – Faculty of Geo-Information Science and Earth Observation (ITC) </br>
-        <br> Department of Earth Observation Science (EOS) </br>
-      </p>
-      <a href="https://people.utwente.nl/abanob.soliman" class="btn">Learn More</a>
+    <!-- The live map. Present on every tab — this is the thing to look at. -->
+    <figure class="viewer">
+      <figcaption class="viewer__bar">
+        <span class="viewer__title">
+          <span class="viewer__led" aria-hidden="true"></span>
+          Sparse map · live
+        </span>
+        <span class="viewer__tools">
+          <button class="viewer__btn" id="vwReset" type="button" title="Reset view" aria-label="Reset view">
+            <svg class="ico" aria-hidden="true"><use href="#i-orbit"/></svg>
+          </button>
+          <button class="viewer__btn" id="vwPlay" type="button" title="Pause map" aria-label="Pause map">
+            <svg class="ico ico--pause" aria-hidden="true"><use href="#i-pause"/></svg>
+            <svg class="ico ico--play" aria-hidden="true"><use href="#i-play"/></svg>
+          </button>
+        </span>
+      </figcaption>
+
+      <div class="viewer__stage">
+        <canvas id="slam" aria-label="Live visualisation of a sparse SLAM map: landmark cloud, estimated trajectory and keyframe poses" role="img"></canvas>
+        <p class="pose" aria-hidden="true">
+          <span>pose</span>
+          <b id="poseX">0.00</b><b id="poseY">0.00</b><b id="poseZ">0.00</b>
+        </p>
+        <p class="viewer__hint" id="vwHint" aria-hidden="true">Drag to orbit</p>
+      </div>
+
+      <ul class="legend">
+        <li><span class="legend__mark legend__mark--pt" aria-hidden="true"></span>Landmark</li>
+        <li><span class="legend__mark legend__mark--kf" aria-hidden="true"></span>Keyframe pose</li>
+        <li><span class="legend__mark legend__mark--tr" aria-hidden="true"></span>Trajectory</li>
+        <li><span class="legend__mark legend__mark--lc" aria-hidden="true"></span>Loop closure</li>
+      </ul>
+
+      <dl class="hud">
+        <div><dt>landmarks</dt><dd id="hLm">0</dd></div>
+        <div><dt>keyframes</dt><dd id="hKf">0</dd></div>
+        <div><dt>loop cl.</dt><dd id="hLc">0</dd></div>
+        <div><dt>fps</dt><dd id="hFps">60</dd></div>
+      </dl>
+    </figure>
+
+    <div class="rail__cta">
+      <a class="btn btn--solid" href="mailto:abanob.soliman@ieee.org?subject=CV%20request">
+        <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span>Request CV</span>
+      </a>
+      <a class="btn btn--icon" href="https://scholar.google.com/citations?user=dN49z7MAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
+        <svg class="ico" aria-hidden="true"><use href="#i-scholar"/></svg>
+      </a>
+      <a class="btn btn--icon" href="https://github.com/AbanobSoliman" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+        <svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <a class="btn btn--icon" href="mailto:abanob.soliman@ieee.org" title="Email" aria-label="Email">
+        <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+      </a>
     </div>
-  </section>
+  </aside>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p>
-        I am a dedicated ADAS Algorithm Engineer and researcher with a Ph.D. in Signal &amp; Image Processing. My expertise spans advanced sensor fusion, automotive algorithms, and real‐time systems, and I am a Postdoctoral Researcher at the University of Twente since February 2025. I blend academic rigor with hands‑on industry experience to drive innovation in both research and application.
-      </p>
+
+  <!-- ══════════ Right stage: tabs + panels ══════════ -->
+  <main class="stage" id="stage">
+
+    <div class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab" role="tab" id="tab-overview"   aria-controls="panel-overview"   aria-selected="true"  tabindex="0"><span class="tab__n">01</span><span class="tab__l">Overview</span></button>
+      <button class="tab" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1"><span class="tab__n">02</span><span class="tab__l">Experience</span></button>
+      <button class="tab" role="tab" id="tab-research"   aria-controls="panel-research"   aria-selected="false" tabindex="-1"><span class="tab__n">03</span><span class="tab__l">Research</span></button>
+      <button class="tab" role="tab" id="tab-projects"   aria-controls="panel-projects"   aria-selected="false" tabindex="-1"><span class="tab__n">04</span><span class="tab__l">Projects</span></button>
+      <button class="tab" role="tab" id="tab-toolkit"    aria-controls="panel-toolkit"    aria-selected="false" tabindex="-1"><span class="tab__n">05</span><span class="tab__l">Toolkit</span></button>
+      <button class="tab" role="tab" id="tab-contact"    aria-controls="panel-contact"    aria-selected="false" tabindex="-1"><span class="tab__n">06</span><span class="tab__l">Contact</span></button>
+      <span class="tabs__ink" id="tabsInk" aria-hidden="true"></span>
     </div>
-  </section>
 
-  <!-- CV Section (Complete Information) -->
-  <section id="cv">
-    <div class="container">
-      <h2 class="section-title">Curriculum Vitae</h2>
-      <div class="card">
-        <!-- Personal Details -->
-        <h3>Personal Details</h3>
-        <ul>
-          <li><strong>Download PDF Version:</strong> <a href="CV_AbanobSoliman.pdf" target="_blank">CV_AbanobSoliman.pdf</a></li>
-          <li><strong>Email:</strong> <a href="mailto:abanob.soliman@ieee.org">abanob.soliman@ieee.org</a></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a></li>
-          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abanobsoliman" target="_blank">linkedin.com/in/abanobsoliman</a></li>
-        </ul>
+    <div class="panels" id="panels">
 
-        <!-- Professional Experience -->
-        <h3>Professional Experience</h3>
-        <ul>
-          <li>
-            <h4>Feb 2025 – Present: Postdoctoral Researcher, University of Twente – Faculty of Geo-Information Science and Earth Observation (ITC), Enschede, The Netherlands</h4>
-            <img src="https://www.sterktechniekonderwijs.nl/wp-content/uploads/sites/2/2019/12/ut-itc-logo-rgb.png" alt="UT-ITC" class="logo-img">
-            <ul>
-              <li>Researcher (Postdoc) in Off-Road SLAM and Advanced Perception.</li>
-              <li>Spearheading a pioneering project in off-road SLAM and advanced perception, focusing on robust sensor fusion (lidar, camera, IMU) and semantic segmentation in forest environments.</li>
-              <li>Designing, implementing, and optimizing deep learning-based perception algorithms using Python, C++, PyTorch, and ROS for autonomous navigation.</li>
-            </ul>
-          </li>
-          <li>
-            <h4>May 2023 – Dec 2024: Algorithm Engineer, Continental Engineering Services Limited, Burgess Hill, United Kingdom</h4>
-            <!-- Continental logo from Wikimedia Commons -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Continental_AG.png" alt="Continental Engineering Services" class="logo-img">
-            <ul>
-              <li>Contributed to R&D projects with the Ultrasonics and Low‑speed Maneuvering Functions team for major Automotive and Aerospace OEMs.</li>
-              <li>Delivered MLC50/55/60 AUTOSAR C++14 compliant software for an automated parking solution in production at a leading British Automotive OEM.</li>
-              <li>Developed an IMU (Gyro/Accel/Mag) and RTK‑GPS optimization‑based sensor fusion algorithm for a drone odometry pipeline, supporting a radar mapping solution in an eCAL environment.</li>
-              <li>Created a novel spatio‑temporal synchronization scheme for 12 ultrasonic sensors using Genetic Algorithm optimization, validated via extensive Monte Carlo simulations.</li>
-              <li>Developed a Qt5/C++ plugin for SiL and HiL testing of a Short‑Range Radar (SR‑Radar) parking solution.</li>
-              <li>Implemented and tested a novel adaptation algorithm to interface SRR630 detections with an established parking perception pipeline using Ultrasonic Sensors (USS).</li>
-              <li>Developed a collision‑free USS firing pattern hashing function using MATLAB/C++, GMM, and MD5, applied to 10K+ vehicles from various OEMs.</li>
-              <li>Developed a transformer‑based method to generate ultrasonic sensor firing sequences on‑vehicle in real‑time.</li>
-              <li>Delivered technical presentations and proposals to major Automotive OEMs, including British, Indian, and American manufacturers.</li>
-            </ul>
-          </li>
-          <li>
-            <h4>Oct 2020 – Oct 2023: Doctoral Researcher, IBISC Laboratory – SIAM Team, Essonne, France</h4>
-            <!-- IBISC logo: if you have a local file, replace the URL below with "img/ibisc.png" -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_Universit%C3%A9_Paris-Saclay_%28externe%29.svg" alt="IBISC Laboratory" class="logo-img">
-            <ul>
-              <li>Researched solutions for hybridizing multiple sensor modalities (RGB – Depth – Event cameras, IMU/GPS).</li>
-              <li>Teaching responsibilities: C/C++ (L2, L3), Electronic Circuits (L2), Advanced Artificial Perception, project supervision for master students.</li>
-              <li>Served as PhD students' representative at the lab council, supported organizing PhD students' day.</li>
-            </ul>
-          </li>
-          <li>
-            <h4>Feb 2020 – Sep 2020: Research Assistant – Sensor Fusion, IBISC Laboratory – MALIN Challenge, Essonne, France</h4>
-            <ul>
-              <li>Developed a two‑phase localization system: an optimization stage plus multi‑sensor (IMU/GPS‑camera) fusion using ES‑EKF.</li>
-            </ul>
-          </li>
-          <li>
-            <h4>Feb 2019 – Aug 2019: Teaching Assistant, Nile University – Computer Engineering Department, Giza, Egypt</h4>
-            <!-- Nile University logo from Wikimedia Commons -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Nile_University_Logo.png" alt="Nile University" class="logo-img">
-            <ul>
-              <li>Courses taught: Computer Systems Software, Logic Design, Embedded, Discrete Control Systems, and Computer Security.</li>
-            </ul>
-          </li>
-          <li>
-            <h4>Jul 2018 – Nov 2018: Embedded Systems Intern, EmbeddedFab Company, Giza, Egypt</h4>
-            <!-- EmbeddedFab logo: if you have a local file, replace the URL below with "img/embeddedfab.png" -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo Company" class="logo-img">
-            <ul>
-              <li>Embedded software training on various architectures; driver development for industrial sensors/actuators.</li>
-              <li>Valeo (Egypt) Testing Academy participant (Aug 2018).</li>
-            </ul>
-          </li>
-        </ul>
+      <!-- ─────── 01 Overview ─────── -->
+      <section class="panel is-active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
+        <div class="panel__inner">
+          <header class="panel__head">
+            <p class="panel__eyebrow">01 / Overview</p>
+            <h2 class="panel__title">Estimation you can fly on.</h2>
+          </header>
 
-        <!-- Academic Qualifications -->
-        <h3>Academic Qualifications</h3>
-        <ul>
-          <li>
-            <strong>Feb 2024:</strong> Lecturer Qualification No. 24261392899, Section: 61 – Computer Engineering, Automation, Signal Processing (France). 
-            <!-- Université Paris-Saclay logo from Wikimedia Commons -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_Universit%C3%A9_Paris-Saclay_%28externe%29.svg" alt="Université Paris-Saclay" class="logo-img">
-          </li>
-          <li>
-            <strong>Oct 2023:</strong> Doctoral Degree in Signal &amp; Image Processing, Université Paris-Saclay, France.
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_Universit%C3%A9_Paris-Saclay_%28externe%29.svg" alt="Université Paris-Saclay" class="logo-img">
-          </li>
-          <li>
-            <strong>Sep 2020:</strong> Master’s in Smart Aerospace &amp; Autonomous Systems, Université Paris-Saclay, France (GPA 16.778/20, 4.0/4.0, Rank 1st).
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_Universit%C3%A9_Paris-Saclay_%28externe%29.svg" alt="Université Paris-Saclay" class="logo-img">
-          </li>
-          <li>
-            <strong>Jun 2018:</strong> Bachelor’s in Aerospace Engineering, Cairo University, Egypt (88.89% Honours, 4.0/4.0 US/CA).
-            <!-- Cairo University logo from Wikimedia Commons -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Cairo_university.jpg" alt="Cairo University" class="logo-img">
-          </li>
-        </ul>
+          <p class="lede">
+            I build the perception and state-estimation systems that let autonomous machines know
+            <em>where they are</em> — when GPS cannot tell them.
+          </p>
 
-        <!-- Funded Projects -->
-        <h3>Funded Projects</h3>
-        <ul>
-          <li><strong>Aerospace Autonomous Navigation System</strong> – Stabilization system for a quadrotor; collision avoidance &amp; navigation (MATLAB, C++).</li>
-          <li><strong>Flight Simulator (BOEING)</strong> – 6 DOF motion cueing algorithm, enhancing pilot training (C/C++, Matlab/Simulink).</li>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/fnCwLlqg4IA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <dl class="stats">
+            <div class="stat"><dd data-count="8" data-suffix="+">8+</dd><dt>Years in perception &amp; autonomy</dt></div>
+            <div class="stat"><dd data-count="7">7</dd><dt>Peer-reviewed publications</dt></div>
+            <div class="stat"><dd data-count="5">5</dd><dt>Open-source releases</dt></div>
+            <div class="stat"><dd data-count="4">4</dd><dt>Countries worked in</dt></div>
+          </dl>
+
+          <div class="prose">
+            <p>
+              Principal SLAM and computer-vision engineer with <strong>8+ years</strong> delivering
+              production autonomy software across UAV, automotive and defence programmes — from the
+              maths of the estimator down to the NPU it runs on.
+            </p>
+            <p>
+              My work sits where sensing meets certainty: visual-inertial odometry, simultaneous
+              localisation and mapping, and factor-graph optimisation over camera, LiDAR, IMU,
+              GNSS/RTK and event streams. I own full system architecture and the autonomy release
+              train — SITL/HIL verification, CI/CD, reproducible platform images — and I ship it to
+              embedded and edge-AI hardware where the latency budget is measured in milliseconds.
+            </p>
+            <p>
+              I report to CTO level, interface directly with customers and drone OEMs, lead technical
+              hiring, and publish in IEEE venues as an active
+              <abbr title="IEEE Transactions on Instrumentation and Measurement">IEEE TIM</abbr> reviewer.
+            </p>
           </div>
-        </ul>
 
-        <!-- Technical Skills -->
-        <h3>Technical Skills</h3>
-        <ul>
-          <li><strong>Proficient:</strong> Embedded C/C++, Python, MATLAB/Simulink, Scientific/Embedded RUST</li>
-          <li><strong>Experienced:</strong> Helix QAC, Git CI/CD, GoogleTest C++, Qt5, eCAL, ROS1, ROS2</li>
-          <li><strong>Familiar:</strong> JAVA, AutoSAR, DL/ML, JTAG, ARM Microcontroller SW/HW Flashing &amp; Debugging</li>
-          <li><strong>Libraries:</strong> OpenCV, Scipy, scikit-learn, PCL, Ceres, GTSAM, G2O, ORB-SLAM, CARLA</li>
-          <li><strong>Platforms:</strong> Confluence, Docker, Linux, JIRA, AutoSAR Builder, DOORS Requirement Management</li>
-        </ul>
+          <h3 class="subhead">What I work on</h3>
+          <ul class="pillars">
+            <li class="pillar">
+              <p class="pillar__k">01</p>
+              <h4>State estimation &amp; SLAM</h4>
+              <p>Visual-inertial odometry, EKF/ES-EKF, factor-graph and graph-based optimisation with GTSAM, Ceres and g2o.</p>
+            </li>
+            <li class="pillar">
+              <p class="pillar__k">02</p>
+              <h4>Multi-sensor fusion</h4>
+              <p>Camera, LiDAR, IMU, GNSS/RTK and event cameras — with online, offline and mass-production calibration.</p>
+            </li>
+            <li class="pillar">
+              <p class="pillar__k">03</p>
+              <h4>GNSS-denied navigation</h4>
+              <p>Drift-free global localisation for platforms operating where satellite navigation is unavailable or unreliable.</p>
+            </li>
+            <li class="pillar">
+              <p class="pillar__k">04</p>
+              <h4>Perception at the edge</h4>
+              <p>Real-time deep perception on Jetson, Hailo-8 and Blaize NPUs — TensorRT/CUDA and ONNX Runtime optimisation.</p>
+            </li>
+          </ul>
 
-        <!-- References -->
-        <h3>References</h3>
-        <ul>
-          <li>
-            <strong>Alexandre Durand</strong>, Head of Business Center, Continental Engineering Services Ltd<br/>
-          </li>
-          <li>
-            <strong>Hayley Scanlon</strong>, Recruitment Business Partner, Continental Engineering Services Ltd<br/>
-          </li>
-          <li>
-            <strong>Samia Bouchafa-Bruneau</strong>, Professor, Université Paris-Saclay<br/>
-          </li>
-          <li>
-            <strong>Désiré Sidibé</strong>, Professor, IBISC Laboratory, Université Paris-Saclay<br/>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Publications Section -->
-  <section id="publications">
-    <div class="container">
-      <h2 class="section-title">Publications</h2>
-      <div class="card">
-        <ul>
-          <li>
-            <strong>2024:</strong> <em>GPS-Enhanced RGB-D-IMU Calibration for Accurate Pose Estimation</em><br/>
-            Journal: Communications in Computer and Information Science<br/>
-            <a href="https://link.springer.com/chapter/10.1007/978-3-031-66743-5_14" target="_blank">
-              https://link.springer.com/chapter/10.1007/978-3-031-66743-5_14
-            </a><br/>
-            Role: First author, Theoretical Conception &amp; Implementation, Evaluation.
-          </li>
-          <li>
-            <strong>2024:</strong> <em>DH-PTAM: A Deep Hybrid Stereo Events-Frames Parallel Tracking And Mapping System</em><br/>
-            Journal: IEEE Transactions on Intelligent Vehicles<br/>
-            <a href="https://ieeexplore.ieee.org/document/10553268" target="_blank">
-              https://ieeexplore.ieee.org/document/10553268
-            </a><br/>
-            Code: <a href="https://github.com/AbanobSoliman/DH-PTAM" target="_blank">github.com/AbanobSoliman/DH-PTAM</a><br/>
-            Role: First author, Conception &amp; Implementation, Evaluation.
-          </li>
-          <li>
-            <strong>2023:</strong> <em>Visual Odometry Using Heterogeneous Cameras...</em><br/>
-            Defense date: October 5th, 2023<br/>
-            NNT: 2023UPAST119<br/>
-            <a href="https://theses.fr/2023UPAST119" target="_blank">
-              https://theses.fr/2023UPAST119
-            </a><br/>
-            Role: PhD Thesis.
-          </li>
-          <li>
-            <strong>2023:</strong> <em>IBISCape: A Simulated Benchmark...</em><br/>
-            Journal: Journal of Intelligent &amp; Robotic Systems<br/>
-            <a href="https://link.springer.com/article/10.1007/s10846-022-01753-7" target="_blank">
-              https://link.springer.com/article/10.1007/s10846-022-01753-7
-            </a><br/>
-            Code: <a href="https://github.com/AbanobSoliman/IBISCape" target="_blank">github.com/AbanobSoliman/IBISCape</a><br/>
-            Role: First author, Conception &amp; Implementation, Evaluation.
-          </li>
-          <li>
-            <strong>2023:</strong> <em>MAV Localization in Large-Scale Environments...</em><br/>
-            Journal: Sensors - MDPI<br/>
-            <a href="https://www.mdpi.com/1424-8220/23/1/516" target="_blank">
-              https://www.mdpi.com/1424-8220/23/1/516
-            </a><br/>
-            Code 1: <a href="https://github.com/AbanobSoliman/VIO_RGB_IMU" target="_blank">github.com/AbanobSoliman/VIO_RGB_IMU</a><br/>
-            Code 2: <a href="https://github.com/AbanobSoliman/B-splines" target="_blank">github.com/AbanobSoliman/B-splines</a><br/>
-            Role: First author, Conception &amp; Implementation, Evaluation.
-          </li>
-          <li>
-            <strong>2023:</strong> <em>Flow-Based Visual-Inertial Odometry...</em><br/>
-            Conference: 18th International Conference on Computer Vision Theory and Applications (VISAPP)<br/>
-            Location: Lisbon, Portugal<br/>
-            Role: Contributing author, C++ optimization software dev, extensive eval.
-          </li>
-          <li>
-            <strong>2023:</strong> <em>Robust RGB-D-IMU Calibration Method Applied...</em><br/>
-            Conference: 18th International Conference on Computer Vision Theory and Applications (VISAPP)<br/>
-            Location: Lisbon, Portugal<br/>
-            Code: <a href="https://github.com/AbanobSoliman/HCALIB" target="_blank">github.com/AbanobSoliman/HCALIB</a><br/>
-            Role: First author, Conception &amp; Implementation, Evaluation.
-          </li>
-          <li>
-            <strong>Seminars (Contributing Talks):</strong>
-            <ul>
-              <li>
-                <strong>2022:</strong> Towards an Event-based Color-encoded Vision for Robotics<br/>
-                Event: Emerging visual sensors for robotics (GdR Meeting, 10/11/2022)<br/>
-                Location: Sorbonne University, Paris, France<br/>
-                <a href="https://gdr-iasis.cnrs.fr/reunion/484/" target="_blank">https://gdr-iasis.cnrs.fr/reunion/484</a>
-              </li>
-              <li>
-                <strong>2022:</strong> Heterogeneous sensors… Fusion and odometry!<br/>
-                Event: IBISC lab PhD students annual day (23/03/2022)<br/>
-                Location: IBISC LAB, Pelvoux, France<br/>
-                <a href="https://www.ibisc.univ-evry.fr/journee-des-doctorants-du-laboratoire-ibisc-le-mercredi-23-mars-2022/" target="_blank">https://www.ibisc.univ-evry.fr/journee-des-doctorants-du-laboratoire-ibisc-le-mercredi-23-mars-2022</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">GitHub Projects</h2>
-      <div class="card">
-        <div class="project-item">
-          <h3>DH-PTAM</h3>
-          <p>
-            A deep hybrid stereo events-frames parallel tracking and mapping system that integrates deep learning with traditional visual SLAM for improved robustness in challenging environments.
+          <p class="note">
+            <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+            EU-authorised to work — Netherlands, Highly Skilled Migrant.
           </p>
-          <a href="https://github.com/AbanobSoliman/DH-PTAM" target="_blank">View Repository</a>
         </div>
-        <div class="project-item">
-          <h3>IBISCape</h3>
-          <p>
-            A simulated benchmark platform for robotics and vision applications, offering a versatile environment for evaluating and comparing various algorithms.
-          </p>
-          <a href="https://github.com/AbanobSoliman/IBISCape" target="_blank">View Repository</a>
-        </div>
-        <div class="project-item">
-          <h3>VIO_RGB_IMU</h3>
-          <p>
-            An implementation of visual-inertial odometry that fuses RGB camera data and IMU measurements to achieve robust real-time pose estimation.
-          </p>
-          <a href="https://github.com/AbanobSoliman/VIO_RGB_IMU" target="_blank">View Repository</a>
-        </div>
-        <div class="project-item">
-          <h3>B-splines</h3>
-          <p>
-            A repository focused on trajectory smoothing and path planning using B-spline curves, ideal for motion control and robotic navigation.
-          </p>
-          <a href="https://github.com/AbanobSoliman/B-splines" target="_blank">View Repository</a>
-        </div>
-        <div class="project-item">
-          <h3>HCALIB</h3>
-          <p>
-            A robust RGB-D and IMU calibration method that ensures accurate sensor alignment, essential for high-precision sensor fusion applications.
-          </p>
-          <a href="https://github.com/AbanobSoliman/HCALIB" target="_blank">View Repository</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <div class="card">
-        <div class="contact-info">
-          <p><strong>Email:</strong> <a href="mailto:abanob.soliman@ieee.org">abanob.soliman@ieee.org</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abanobsoliman" target="_blank">linkedin.com/in/abanobsoliman</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/AbanobSoliman" target="_blank">github.com/AbanobSoliman</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Dr. Abanob Soliman. All rights reserved.</p>
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
+      <!-- ─────── 02 Experience ─────── -->
+      <section class="panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0">
+        <div class="panel__inner">
+          <header class="panel__head">
+            <p class="panel__eyebrow">02 / Experience</p>
+            <h2 class="panel__title">Eight years, one trajectory.</h2>
+            <p class="panel__sub">
+              Each role is a keyframe on the path. Hover one to find it in the map.
+            </p>
+          </header>
+
+          <ol class="track" id="track">
+            <li class="kf" data-kf="0">
+              <p class="kf__time"><span class="kf__from">Jan 2026</span><span class="kf__to">Present</span></p>
+              <div class="kf__node" aria-hidden="true"></div>
+              <div class="kf__body">
+                <h3 class="kf__role">Principal SLAM &amp; Computer Vision Engineer</h3>
+                <p class="kf__org">KRUSH Labs B.V. — Autonomy Team · High Tech Campus, Eindhoven, NL</p>
+                <ul class="kf__points">
+                  <li>Own the full autonomy system architecture for GPS-denied flight — from sensor selection and compute budgeting through state estimation, perception and control interfaces — reporting to the CTO on technical strategy and roadmap.</li>
+                  <li>Lead the visual-inertial odometry and absolute visual navigation programme, delivering drift-free global geo-localisation for flight in GNSS-denied conditions.</li>
+                  <li>Manage the autonomy release train: versioning strategy, CI/CD, reproducible build images, and coordinated integration across firmware, perception and ground-control software.</li>
+                  <li>Established the software- and hardware-in-the-loop verification and validation loop used for regression testing ahead of flight campaigns.</li>
+                  <li>Deploy real-time perception to embedded edge hardware in C/C++, Python and ROS 2, including model optimisation and camera–IMU calibration for production.</li>
+                  <li>Act as technical interface to customers and drone OEMs, and lead technical hiring for the autonomy team.</li>
+                </ul>
+                <ul class="tags"><li>System architecture</li><li>SLAM</li><li>Visual-inertial odometry</li><li>Sensor fusion</li><li>ROS 2</li><li>Embedded C++</li></ul>
+              </div>
+            </li>
+
+            <li class="kf" data-kf="1">
+              <p class="kf__time"><span class="kf__from">Feb 2025</span><span class="kf__to">Jan 2026</span></p>
+              <div class="kf__node" aria-hidden="true"></div>
+              <div class="kf__body">
+                <h3 class="kf__role">Postdoctoral Researcher</h3>
+                <p class="kf__org">University of Twente — ITC Faculty · Enschede, NL</p>
+                <ul class="kf__points">
+                  <li>Off-road SLAM and advanced perception in collaboration with the Dutch Ministry of Defence and Demcon; co-supervised interns and MSc thesis projects.</li>
+                  <li>Led a robust LiDAR/camera/IMU sensor-fusion architecture for semantic segmentation in forestry environments.</li>
+                  <li>Implemented deep-learning perception in MATLAB/Python, C/C++, PyTorch, ROS 2 and ONNX Runtime, with model optimisation for CUDA and TensorRT execution providers.</li>
+                </ul>
+                <ul class="tags"><li>Off-road SLAM</li><li>LiDAR fusion</li><li>Semantic segmentation</li><li>PyTorch</li><li>TensorRT</li></ul>
+              </div>
+            </li>
+
+            <li class="kf" data-kf="2">
+              <p class="kf__time"><span class="kf__from">May 2023</span><span class="kf__to">Dec 2024</span></p>
+              <div class="kf__node" aria-hidden="true"></div>
+              <div class="kf__body">
+                <h3 class="kf__role">Algorithm Engineer</h3>
+                <p class="kf__org">Continental Engineering Services · Burgess Hill, UK</p>
+                <ul class="kf__points">
+                  <li>Delivered MLC50/55/60 AUTOSAR C++14 compliant software for an automated parking solution in production at a British OEM.</li>
+                  <li>Developed IMU/RTK-GPS optimisation-based sensor fusion for a drone odometry pipeline on eCAL middleware.</li>
+                  <li>Created genetic-algorithm synchronisation for 12 ultrasonic sensors, validated by Monte Carlo simulation.</li>
+                  <li>Designed a Qt5/C++ plugin for SiL and HiL testing of an SR-Radar parking solution, and integrated SRR630/ultrasonic fusion in embedded C++ for software-defined vehicles.</li>
+                  <li>Built collision-free USS firing-pattern hashing with Gaussian Mixture Models and MD5, applied across 10K+ vehicles; and a transformer-based method generating firing sequences on-vehicle in real time.</li>
+                  <li>Delivered technical presentations and proposals to major British, Indian and American automotive OEMs.</li>
+                </ul>
+                <ul class="tags"><li>AUTOSAR C++14</li><li>eCAL</li><li>Qt5</li><li>SiL / HiL</li><li>ISO 26262</li></ul>
+              </div>
+            </li>
+
+            <li class="kf" data-kf="3">
+              <p class="kf__time"><span class="kf__from">Oct 2020</span><span class="kf__to">Oct 2023</span></p>
+              <div class="kf__node" aria-hidden="true"></div>
+              <div class="kf__body">
+                <h3 class="kf__role">Doctoral Researcher</h3>
+                <p class="kf__org">IBISC Laboratory — SIAM Team, Université Paris-Saclay · Essonne, FR</p>
+                <ul class="kf__points">
+                  <li>Researched multi-sensor fusion across RGB-D and event cameras with IMU/GPS for autonomous navigation.</li>
+                  <li>Taught C/C++ programming and electronic circuits, and supervised master's projects.</li>
+                  <li>Served as PhD students' representative and organised the laboratory's annual PhD day.</li>
+                </ul>
+                <ul class="tags"><li>Event cameras</li><li>RGB-D</li><li>Teaching</li></ul>
+              </div>
+            </li>
+
+            <li class="kf" data-kf="4">
+              <p class="kf__time"><span class="kf__from">Feb 2020</span><span class="kf__to">Sep 2020</span></p>
+              <div class="kf__node" aria-hidden="true"></div>
+              <div class="kf__body">
+                <h3 class="kf__role">Research Assistant — Sensor Fusion</h3>
+                <p class="kf__org">IBISC Laboratory — MALIN Challenge · Essonne, FR</p>
+                <ul class="kf__points">
+                  <li>Implemented ES-EKF multi-sensor (IMU/GPS-camera) fusion for a localisation system.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="kf" data-kf="5">
+              <p class="kf__time"><span class="kf__from">Feb 2019</span><span class="kf__to">Aug 2019</span></p>
+              <div class="kf__node" aria-hidden="true"></div>
+              <div class="kf__body">
+                <h3 class="kf__role">Teaching Assistant</h3>
+                <p class="kf__org">Nile University — Computer Engineering · Giza, EG</p>
+                <ul class="kf__points">
+                  <li>Taught Computer Systems Software, Logic Design, Embedded Systems and Computer Security.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="kf" data-kf="6">
+              <p class="kf__time"><span class="kf__from">Jul 2018</span><span class="kf__to">Nov 2018</span></p>
+              <div class="kf__node" aria-hidden="true"></div>
+              <div class="kf__body">
+                <h3 class="kf__role">Embedded Systems Intern</h3>
+                <p class="kf__org">EmbeddedFab · Giza, EG</p>
+                <ul class="kf__points">
+                  <li>Developed embedded software and drivers for industrial sensors and actuators; participated in the Valeo Testing Academy.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+
+          <h3 class="subhead">Education &amp; credentials</h3>
+          <ul class="creds">
+            <li class="cred">
+              <p class="cred__when">Feb 2024</p>
+              <h4 class="cred__what">Lecturer Qualification</h4>
+              <p class="cred__where">French Ministry of Higher Education and Research</p>
+              <p class="cred__note">Section 61 — Computer Engineering, Automation &amp; Signal Processing · No. 24261392899</p>
+            </li>
+            <li class="cred">
+              <p class="cred__when">Oct 2023</p>
+              <h4 class="cred__what">Ph.D. in Signal &amp; Image Processing</h4>
+              <p class="cred__where">Université Paris-Saclay, France</p>
+              <p class="cred__note">Thesis: <em>Visual Odometry Using Heterogeneous Cameras for Simultaneous Localization and Mapping for Autonomous Vehicles</em></p>
+            </li>
+            <li class="cred">
+              <p class="cred__when">Sep 2020</p>
+              <h4 class="cred__what">M.Sc. Smart Aerospace &amp; Autonomous Systems</h4>
+              <p class="cred__where">Université Paris-Saclay, France</p>
+              <p class="cred__note">Grade 16.778/20 · Ranked 1st</p>
+            </li>
+            <li class="cred">
+              <p class="cred__when">Jun 2018</p>
+              <h4 class="cred__what">B.Sc. Aerospace Engineering</h4>
+              <p class="cred__where">Cairo University, Egypt</p>
+              <p class="cred__note">Grade 88.89% · Honours</p>
+            </li>
+            <li class="cred">
+              <p class="cred__when">2023</p>
+              <h4 class="cred__what">Sensor Fusion Engineer Nano-Degree</h4>
+              <p class="cred__where">Udacity</p>
+              <p class="cred__note">Certification</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ─────── 03 Research ─────── -->
+      <section class="panel" id="panel-research" role="tabpanel" aria-labelledby="tab-research" tabindex="0">
+        <div class="panel__inner">
+          <header class="panel__head">
+            <p class="panel__eyebrow">03 / Research</p>
+            <h2 class="panel__title">Published work.</h2>
+            <p class="panel__sub">
+              Seven peer-reviewed papers and a doctoral thesis. Full record on
+              <a href="https://scholar.google.com/citations?user=dN49z7MAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+            </p>
+          </header>
+
+          <div class="filters" role="group" aria-label="Filter publications by type">
+            <button class="chip is-on" type="button" data-filter="all" aria-pressed="true">All <span class="chip__n">10</span></button>
+            <button class="chip" type="button" data-filter="journal" aria-pressed="false">Journals <span class="chip__n">4</span></button>
+            <button class="chip" type="button" data-filter="conference" aria-pressed="false">Conferences <span class="chip__n">3</span></button>
+            <button class="chip" type="button" data-filter="thesis" aria-pressed="false">Thesis <span class="chip__n">1</span></button>
+            <button class="chip" type="button" data-filter="talk" aria-pressed="false">Talks <span class="chip__n">2</span></button>
+          </div>
+
+          <ol class="pubs" id="pubs">
+            <li class="pub" data-type="conference">
+              <p class="pub__year">2026</p>
+              <div class="pub__body">
+                <h3 class="pub__title">Towards Autonomous Off-road Navigation in Forests</h3>
+                <p class="pub__venue"><span class="badge badge--conf">Workshop</span> ICRA 2026</p>
+              </div>
+            </li>
+            <li class="pub" data-type="journal">
+              <p class="pub__year">2024</p>
+              <div class="pub__body">
+                <h3 class="pub__title">DH-PTAM: A Deep Hybrid Stereo Events-Frames Parallel Tracking and Mapping System</h3>
+                <p class="pub__venue"><span class="badge badge--journal">Journal</span> IEEE Transactions on Intelligent Vehicles</p>
+                <p class="pub__role">First author — conception, implementation, evaluation.</p>
+                <p class="pub__links">
+                  <a href="https://ieeexplore.ieee.org/document/10553268" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Paper</a>
+                  <a href="https://github.com/AbanobSoliman/DH-PTAM" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg>Code</a>
+                </p>
+              </div>
+            </li>
+            <li class="pub" data-type="journal">
+              <p class="pub__year">2024</p>
+              <div class="pub__body">
+                <h3 class="pub__title">GPS-Enhanced RGB-D-IMU Calibration for Accurate Pose Estimation</h3>
+                <p class="pub__venue"><span class="badge badge--journal">Journal</span> Communications in Computer and Information Science, Springer</p>
+                <p class="pub__role">First author — theoretical conception, implementation, evaluation.</p>
+                <p class="pub__links">
+                  <a href="https://link.springer.com/chapter/10.1007/978-3-031-66743-5_14" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Paper</a>
+                </p>
+              </div>
+            </li>
+            <li class="pub" data-type="thesis">
+              <p class="pub__year">2023</p>
+              <div class="pub__body">
+                <h3 class="pub__title">Visual Odometry Using Heterogeneous Cameras for Simultaneous Localization and Mapping for Autonomous Vehicles</h3>
+                <p class="pub__venue"><span class="badge badge--thesis">Ph.D. Thesis</span> Université Paris-Saclay · NNT 2023UPAST119</p>
+                <p class="pub__role">Defended 5 October 2023.</p>
+                <p class="pub__links">
+                  <a href="https://theses.fr/2023UPAST119" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Thesis</a>
+                </p>
+              </div>
+            </li>
+            <li class="pub" data-type="journal">
+              <p class="pub__year">2023</p>
+              <div class="pub__body">
+                <h3 class="pub__title">IBISCape: A Simulated Benchmark for Multi-modal SLAM Systems Evaluation in Large-scale Dynamic Environments</h3>
+                <p class="pub__venue"><span class="badge badge--journal">Journal</span> Journal of Intelligent &amp; Robotic Systems</p>
+                <p class="pub__role">First author — conception, implementation, evaluation.</p>
+                <p class="pub__links">
+                  <a href="https://link.springer.com/article/10.1007/s10846-022-01753-7" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Paper</a>
+                  <a href="https://github.com/AbanobSoliman/IBISCape" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg>Code</a>
+                </p>
+              </div>
+            </li>
+            <li class="pub" data-type="journal">
+              <p class="pub__year">2023</p>
+              <div class="pub__body">
+                <h3 class="pub__title">MAV Localization in Large-Scale Environments: A Decoupled Optimization/Filtering Approach</h3>
+                <p class="pub__venue"><span class="badge badge--journal">Journal</span> Sensors — MDPI</p>
+                <p class="pub__role">First author — conception, implementation, evaluation.</p>
+                <p class="pub__links">
+                  <a href="https://www.mdpi.com/1424-8220/23/1/516" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>Paper</a>
+                  <a href="https://github.com/AbanobSoliman/VIO_RGB_IMU" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg>VIO_RGB_IMU</a>
+                  <a href="https://github.com/AbanobSoliman/B-splines" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg>B-splines</a>
+                </p>
+              </div>
+            </li>
+            <li class="pub" data-type="conference">
+              <p class="pub__year">2023</p>
+              <div class="pub__body">
+                <h3 class="pub__title">Robust RGB-D-IMU Calibration Method Applied to GPS-Aided Pose Estimation</h3>
+                <p class="pub__venue"><span class="badge badge--conf">Conference</span> VISAPP 2023 · Lisbon, Portugal</p>
+                <p class="pub__role">First author — conception, implementation, evaluation.</p>
+                <p class="pub__links">
+                  <a href="https://github.com/AbanobSoliman/HCALIB" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg>Code</a>
+                </p>
+              </div>
+            </li>
+            <li class="pub" data-type="conference">
+              <p class="pub__year">2023</p>
+              <div class="pub__body">
+                <h3 class="pub__title">Flow-Based Visual-Inertial Odometry for Neuromorphic Vision Sensors</h3>
+                <p class="pub__venue"><span class="badge badge--conf">Conference</span> VISAPP 2023 · Lisbon, Portugal</p>
+                <p class="pub__role">Contributing author — C++ optimisation software, extensive evaluation.</p>
+              </div>
+            </li>
+            <li class="pub" data-type="talk">
+              <p class="pub__year">2022</p>
+              <div class="pub__body">
+                <h3 class="pub__title">Towards an Event-based Colour-encoded Vision for Robotics</h3>
+                <p class="pub__venue"><span class="badge badge--talk">Invited talk</span> Emerging Visual Sensors for Robotics, GdR ISIS · Sorbonne University, Paris</p>
+                <p class="pub__links">
+                  <a href="https://gdr-iasis.cnrs.fr/reunion/484/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>Programme</a>
+                </p>
+              </div>
+            </li>
+            <li class="pub" data-type="talk">
+              <p class="pub__year">2022</p>
+              <div class="pub__body">
+                <h3 class="pub__title">Heterogeneous Sensors — Fusion and Odometry</h3>
+                <p class="pub__venue"><span class="badge badge--talk">Talk</span> IBISC PhD Students' Annual Day · Pelvoux, France</p>
+                <p class="pub__links">
+                  <a href="https://www.ibisc.univ-evry.fr/journee-des-doctorants-du-laboratoire-ibisc-le-mercredi-23-mars-2022/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>Programme</a>
+                </p>
+              </div>
+            </li>
+          </ol>
+          <p class="empty" id="pubsEmpty" hidden>No publications in this category.</p>
+        </div>
+      </section>
+
+
+      <!-- ─────── 04 Projects ─────── -->
+      <section class="panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
+        <div class="panel__inner">
+          <header class="panel__head">
+            <p class="panel__eyebrow">04 / Projects</p>
+            <h2 class="panel__title">Built and shipped.</h2>
+          </header>
+
+          <article class="feature">
+            <div class="feature__body">
+              <p class="feature__k">Lead Algorithm Engineer · AEROINTEL B.V., Amsterdam</p>
+              <h3 class="feature__title">Drone Odometry Pipeline</h3>
+              <p>
+                An embedded AI perception stack delivering real-time, on-board sensor fusion
+                for autonomous-flight research and development.
+              </p>
+              <ul class="feature__points">
+                <li>Thread-safe pipelines with separate producer threads for serial I/O and camera capture, holding a real-time budget on embedded hardware.</li>
+                <li>Extended Protobuf schema over MAVLink telemetry for structured, language-agnostic exchange.</li>
+                <li>Camera–IMU fusion for on-board odometry in C++.</li>
+                <li>Map-aided visual localisation to supplement inertial navigation.</li>
+              </ul>
+              <ul class="tags"><li>Embedded C++</li><li>Sensor fusion</li><li>Protobuf</li><li>MAVLink</li><li>Edge AI</li></ul>
+            </div>
+            <div class="feature__aside" aria-hidden="true">
+              <p class="latency__label">on-board pipeline</p>
+              <p class="latency__val latency__val--word">Real&#8209;time</p>
+              <p class="latency__foot">capture → fuse → publish</p>
+            </div>
+          </article>
+
+          <h3 class="subhead">Open source</h3>
+          <ul class="repos">
+            <li class="repo">
+              <h4 class="repo__name">DH-PTAM</h4>
+              <p class="repo__desc">Deep hybrid stereo events-frames parallel tracking and mapping — combining learned front-ends with classical SLAM for robustness in hard lighting and motion.</p>
+              <p class="repo__meta">IEEE T-IV 2024</p>
+              <a class="repo__link" href="https://github.com/AbanobSoliman/DH-PTAM" target="_blank" rel="noopener"><span>Repository</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </li>
+            <li class="repo">
+              <h4 class="repo__name">IBISCape</h4>
+              <p class="repo__desc">A CARLA-based simulated benchmark for evaluating multi-modal SLAM in large-scale dynamic environments, with ground-truth trajectories and calibration sequences.</p>
+              <p class="repo__meta">J. Intell. Robot. Syst. 2023</p>
+              <a class="repo__link" href="https://github.com/AbanobSoliman/IBISCape" target="_blank" rel="noopener"><span>Repository</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </li>
+            <li class="repo">
+              <h4 class="repo__name">VIO_RGB_IMU</h4>
+              <p class="repo__desc">Decoupled optimisation/filtering visual-inertial odometry fusing RGB frames with inertial measurements for real-time MAV pose estimation.</p>
+              <p class="repo__meta">Sensors 2023</p>
+              <a class="repo__link" href="https://github.com/AbanobSoliman/VIO_RGB_IMU" target="_blank" rel="noopener"><span>Repository</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </li>
+            <li class="repo">
+              <h4 class="repo__name">B-splines</h4>
+              <p class="repo__desc">Continuous-time trajectory representation with B-spline curves — smooth interpolation for motion control and estimation over asynchronous sensor data.</p>
+              <p class="repo__meta">Sensors 2023</p>
+              <a class="repo__link" href="https://github.com/AbanobSoliman/B-splines" target="_blank" rel="noopener"><span>Repository</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </li>
+            <li class="repo">
+              <h4 class="repo__name">HCALIB</h4>
+              <p class="repo__desc">Robust RGB-D–IMU calibration recovering spatial and temporal extrinsics — the alignment step every fusion stack depends on.</p>
+              <p class="repo__meta">VISAPP 2023</p>
+              <a class="repo__link" href="https://github.com/AbanobSoliman/HCALIB" target="_blank" rel="noopener"><span>Repository</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </li>
+          </ul>
+
+          <h3 class="subhead">Earlier engineering</h3>
+          <div class="earlier">
+            <article class="earlier__item">
+              <h4>Aerospace Autonomous Navigation System</h4>
+              <p class="earlier__meta">M.Sc. project · IBISC, France</p>
+              <p>Quadrotor stabilisation with collision-avoidance and navigation algorithms in MATLAB and C++.</p>
+            </article>
+            <article class="earlier__item">
+              <h4>Flight Simulator — Stewart Platform</h4>
+              <p class="earlier__meta">B.Sc. graduation project · funded by Boeing</p>
+              <p>A 6-DOF motion cueing algorithm for pilot training, implemented in C++ and MATLAB/Simulink.</p>
+              <div class="embed">
+                <iframe src="https://www.youtube-nocookie.com/embed/fnCwLlqg4IA" title="Flight simulator Stewart platform — 6-DOF motion cueing demonstration" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ─────── 05 Toolkit ─────── -->
+      <section class="panel" id="panel-toolkit" role="tabpanel" aria-labelledby="tab-toolkit" tabindex="0">
+        <div class="panel__inner">
+          <header class="panel__head">
+            <p class="panel__eyebrow">05 / Toolkit</p>
+            <h2 class="panel__title">The stack, honestly rated.</h2>
+          </header>
+
+          <div class="kit">
+            <section class="kit__group">
+              <h3>Languages</h3>
+              <ul class="kit__list">
+                <li><span class="kit__name">Embedded C / C++</span><span class="kit__tier" data-tier="1">proficient</span></li>
+                <li><span class="kit__name">Python</span><span class="kit__tier" data-tier="1">proficient</span></li>
+                <li><span class="kit__name">MATLAB / Simulink</span><span class="kit__tier" data-tier="1">proficient</span></li>
+                <li><span class="kit__name">Rust — scientific &amp; embedded</span><span class="kit__tier" data-tier="1">proficient</span></li>
+                <li><span class="kit__name">Java</span><span class="kit__tier" data-tier="3">familiar</span></li>
+              </ul>
+            </section>
+            <section class="kit__group">
+              <h3>Robotics &amp; middleware</h3>
+              <ul class="kit__list">
+                <li><span class="kit__name">ROS 1 / ROS 2</span><span class="kit__tier" data-tier="2">experienced</span></li>
+                <li><span class="kit__name">PX4 / MAVLink</span><span class="kit__tier" data-tier="2">experienced</span></li>
+                <li><span class="kit__name">eCAL</span><span class="kit__tier" data-tier="2">experienced</span></li>
+                <li><span class="kit__name">Qt5</span><span class="kit__tier" data-tier="2">experienced</span></li>
+                <li><span class="kit__name">AUTOSAR</span><span class="kit__tier" data-tier="3">familiar</span></li>
+              </ul>
+            </section>
+            <section class="kit__group">
+              <h3>Estimation &amp; vision</h3>
+              <ul class="kit__list">
+                <li><span class="kit__name">OpenCV</span></li><li><span class="kit__name">Ceres</span></li>
+                <li><span class="kit__name">GTSAM</span></li><li><span class="kit__name">g2o</span></li>
+                <li><span class="kit__name">PCL</span></li><li><span class="kit__name">ORB-SLAM</span></li>
+                <li><span class="kit__name">CARLA</span></li><li><span class="kit__name">SciPy · scikit-learn</span></li>
+              </ul>
+            </section>
+            <section class="kit__group">
+              <h3>Deep learning &amp; edge</h3>
+              <ul class="kit__list">
+                <li><span class="kit__name">PyTorch</span></li><li><span class="kit__name">TensorRT / CUDA</span></li>
+                <li><span class="kit__name">ONNX Runtime</span></li><li><span class="kit__name">NVIDIA Jetson</span></li>
+                <li><span class="kit__name">Hailo-8</span></li><li><span class="kit__name">Blaize NPU</span></li>
+                <li><span class="kit__name">Raspberry Pi 5</span></li>
+              </ul>
+            </section>
+            <section class="kit__group">
+              <h3>Platforms &amp; tooling</h3>
+              <ul class="kit__list">
+                <li><span class="kit__name">Linux</span></li><li><span class="kit__name">Docker</span></li>
+                <li><span class="kit__name">Git CI/CD</span></li><li><span class="kit__name">GoogleTest</span></li>
+                <li><span class="kit__name">Helix QAC</span></li><li><span class="kit__name">JIRA · Confluence</span></li>
+                <li><span class="kit__name">DOORS</span></li><li><span class="kit__name">JTAG · ARM MCU</span></li>
+              </ul>
+            </section>
+            <section class="kit__group kit__group--std">
+              <h3>Standards &amp; safety</h3>
+              <ul class="kit__list">
+                <li><span class="kit__name">DO-178B/C</span></li><li><span class="kit__name">ISO 26262</span></li>
+                <li><span class="kit__name">ASPICE</span></li><li><span class="kit__name">MLC50/55/60 AUTOSAR</span></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ─────── 06 Contact ─────── -->
+      <section class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" tabindex="0">
+        <div class="panel__inner">
+          <header class="panel__head">
+            <p class="panel__eyebrow">06 / Contact</p>
+            <h2 class="panel__title">Let's talk autonomy.</h2>
+            <p class="panel__sub">Open to research collaboration, technical advisory and speaking on GNSS-denied navigation.</p>
+          </header>
+
+          <ul class="links">
+            <li><a href="mailto:abanob.soliman@ieee.org">
+              <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+              <span class="links__k">Email</span><span class="links__v">abanob.soliman@ieee.org</span>
+              <svg class="ico links__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="https://scholar.google.com/citations?user=dN49z7MAAAAJ" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-scholar"/></svg>
+              <span class="links__k">Google Scholar</span><span class="links__v">dN49z7MAAAAJ</span>
+              <svg class="ico links__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="https://orcid.org/0000-0003-4956-8580" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-orcid"/></svg>
+              <span class="links__k">ORCID</span><span class="links__v">0000-0003-4956-8580</span>
+              <svg class="ico links__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/abanobsoliman" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-linkedin"/></svg>
+              <span class="links__k">LinkedIn</span><span class="links__v">in/abanobsoliman</span>
+              <svg class="ico links__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="https://github.com/AbanobSoliman" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>
+              <span class="links__k">GitHub</span><span class="links__v">AbanobSoliman</span>
+              <svg class="ico links__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="mailto:abanob.soliman@ieee.org?subject=CV%20request">
+              <svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>
+              <span class="links__k">Full CV</span><span class="links__v">Sent on request — email me</span>
+              <svg class="ico links__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          </ul>
+
+          <p class="note">Full CV and references available on request.</p>
+
+          <footer class="foot">
+            <p>Dr. Ir. Abanob Soliman — Eindhoven, The Netherlands · &copy; <span id="year">2026</span></p>
+          </footer>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abanob Soliman",
+  "honorificPrefix": "Dr. Ir.",
+  "givenName": "Abanob",
+  "familyName": "Soliman",
+  "jobTitle": "Principal SLAM & Computer Vision Engineer",
+  "email": "mailto:abanob.soliman@ieee.org",
+  "url": "https://abanobsoliman.github.io/",
+  "image": "https://abanobsoliman.github.io/img/Profile_new.jpeg",
+  "description": "Principal SLAM and computer vision engineer and PhD-qualified robotics researcher specialising in state estimation, visual-inertial odometry and multi-sensor fusion for GNSS-denied autonomy.",
+  "worksFor": { "@type": "Organization", "name": "KRUSH Labs B.V." },
+  "address": { "@type": "PostalAddress", "addressLocality": "Eindhoven", "addressCountry": "NL" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Université Paris-Saclay" },
+    { "@type": "CollegeOrUniversity", "name": "Cairo University" }
+  ],
+  "knowsAbout": [
+    "Simultaneous Localization and Mapping",
+    "Visual-Inertial Odometry",
+    "Sensor Fusion",
+    "Computer Vision",
+    "State Estimation",
+    "Autonomous Navigation",
+    "Event Cameras",
+    "Embedded AI"
+  ],
+  "sameAs": [
+    "https://scholar.google.com/citations?user=dN49z7MAAAAJ",
+    "https://orcid.org/0000-0003-4956-8580",
+    "https://github.com/AbanobSoliman",
+    "https://www.linkedin.com/in/abanobsoliman"
+  ]
+}
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>
